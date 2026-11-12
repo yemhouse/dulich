@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành Trình Di Sản Miền Trung: Huế – Đà Nẵng – Hội An (4N3Đ)</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html, body {
+            height: auto !important;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto !important;
+            -webkit-overflow-scrolling: touch;
+            background-color: #fbf9f5;
+            color: #1c1917;
+        }
+
+        ::-webkit-scrollbar { width: 8px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f5f0e6; }
+        ::-webkit-scrollbar-thumb { background: #d6c7b2; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #b49a78; }
+
+        .glass-header {
+            background: rgba(251, 249, 245, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.45) 0%, rgba(28, 25, 23, 0.32) 45%, rgba(28, 25, 23, 0.9) 100%);
+        }
+
+        .editorial-card {
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+        }
+        .editorial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(28, 25, 23, 0.08), 0 8px 10px -6px rgba(28, 25, 23, 0.04);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-200 selection:text-stone-950">
+
+    <!-- Thanh Điều Hướng Nhanh (Sticky Tabs) -->
+    <nav class="sticky top-0 inset-x-0 z-50 glass-header border-b border-stone-200/80 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-3">
+                <a href="#top" class="flex items-center gap-2.5 shrink-0 group">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 via-orange-600 to-teal-700 flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform">
+                        <i data-lucide="compass" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-base sm:text-lg tracking-tight text-stone-900 block leading-none">Di Sản Miền Trung</span>
+                        <span class="text-[11px] font-bold text-amber-700 tracking-wider uppercase">22 – 25/11/2026</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-1 sm:gap-2 overflow-x-auto no-scrollbar py-1">
+                    <a href="#overview" class="shrink-0 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-stone-700 hover:bg-amber-100/70 hover:text-amber-900 transition-colors">
+                        Tổng quan & Vé/Phòng
+                    </a>
+                    <a href="#itinerary" class="shrink-0 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-stone-700 hover:bg-amber-100/70 hover:text-amber-900 transition-colors">
+                        Lịch trình 4 Ngày
+                    </a>
+                    <a href="#budget" class="shrink-0 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-stone-700 hover:bg-amber-100/70 hover:text-amber-900 transition-colors">
+                        Bảng Chi Phí
+                    </a>
+                </div>
+
+                <a href="#budget" class="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900 hover:bg-amber-600 text-white text-xs font-bold transition-colors shrink-0">
+                    <i data-lucide="wallet" class="w-3.5 h-3.5 text-amber-300"></i>
+                    <span id="nav-quick-cost">~4,22tr/người</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header id="top" class="relative w-full py-20 sm:py-28 lg:py-36 flex items-center overflow-hidden">
+        <img
+            src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-10.jpg/960px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-10.jpg"
+            alt="Phố cổ Hội An rực rỡ đèn lồng"
+            onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/78350f/fef3c7?text=H%E1%BB%99i+An+-+%C4%90%C3%A0+N%E1%BA%B5ng+-+Hu%E1%BA%BF';"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+        >
+        <div class="absolute inset-0 hero-gradient"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl">
+                <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-2 rounded-2xl bg-stone-950/55 border border-white/20 backdrop-blur-md text-xs sm:text-sm font-semibold text-amber-200 mb-6 shadow-lg">
+                    <span class="flex items-center gap-1.5 text-white font-bold">
+                        <i data-lucide="calendar-days" class="w-4 h-4 text-amber-400"></i>
+                        22/11 – 25/11/2026 (4 Ngày 3 Đêm)
+                    </span>
+                    <span class="text-white/40">•</span>
+                    <span class="flex items-center gap-1.5 text-amber-200">
+                        <i data-lucide="users" class="w-4 h-4 text-amber-400"></i>
+                        Nhóm 3 Khách
+                    </span>
+                    <span class="text-white/40">•</span>
+                    <span class="flex items-center gap-1.5 text-teal-300">
+                        <i data-lucide="plane" class="w-4 h-4"></i>
+                        Bay Vietjet + Tự lái VinFast VF3
+                    </span>
+                </div>
+
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] tracking-tight mb-5">
+                    Hành Trình Di Sản Miền Trung: <span class="text-amber-300 italic">Huế – Đà Nẵng – Hội An</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-stone-100/95 leading-relaxed mb-8 max-w-2xl">
+                    Cẩm nang trải nghiệm trọn vẹn 4 ngày 3 đêm từ nét trầm mặc Cố đô Huế, tự tay cầm lái VinFast VF3 vượt đèo Hải Vân hùng vĩ, tận hưởng biển ngọc Đà Nẵng đến đêm hoa đăng lung linh giữa lòng phố cổ Hội An.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-3.5">
+                    <a href="#itinerary" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-stone-950 font-bold text-sm sm:text-base transition-all shadow-lg shadow-amber-500/20">
+                        <span>Khám Phá Lịch Trình 4 Ngày</span>
+                        <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#budget" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-md font-semibold text-sm sm:text-base transition-all">
+                        <i data-lucide="calculator" class="w-4 h-4 text-amber-300"></i>
+                        <span>Bảng Chi Phí & Chia Tiền</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nội Dung Chính -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 py-14 sm:py-20">
+
+        <!-- PHẦN 1: TỔNG QUAN -->
+        <section id="overview" class="scroll-mt-24">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700 block mb-1.5">Phần 01 • Hạ tầng & Đặt chỗ</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Tổng Quan Vé Máy Bay, Lưu Trú & Xe Tự Lái</h2>
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-teal-800 bg-teal-50 border border-teal-200 px-3.5 py-2 rounded-xl self-start sm:self-auto">
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600"></i>
+                    Đã khớp lịch trình 3 người lớn
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Chuyến Bay -->
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/90 shadow-xs editorial-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold">Vé Máy Bay Vietjet Air</span>
+                            <span class="text-xs font-bold text-stone-400">Gói Eco • 7kg xách tay</span>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-stone-50 border border-stone-200/70 mb-3">
+                            <div class="flex items-center justify-between text-xs font-bold text-amber-800 mb-1.5">
+                                <span>CHUYẾN ĐI • 22/11/2026</span>
+                                <span>VJ308</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-xl font-extrabold text-stone-900">SGN</p>
+                                    <p class="text-xs text-stone-500">07:10 • TP.HCM</p>
+                                </div>
+                                <div class="flex flex-col items-center px-2">
+                                    <span class="text-[11px] font-semibold text-stone-400 mb-1">1h 25p</span>
+                                    <div class="w-16 h-[2px] bg-amber-300 flex items-center justify-center">
+                                        <i data-lucide="plane" class="w-4 h-4 text-amber-600 bg-stone-50 px-0.5"></i>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xl font-extrabold text-stone-900">HUI</p>
+                                    <p class="text-xs text-stone-500">08:35 • Huế</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-2xl bg-stone-50 border border-stone-200/70">
+                            <div class="flex items-center justify-between text-xs font-bold text-teal-800 mb-1.5">
+                                <span>CHUYẾN VỀ • 25/11/2026</span>
+                                <span>VJ631</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-xl font-extrabold text-stone-900">DAD</p>
+                                    <p class="text-xs text-stone-500">14:30 • Đà Nẵng</p>
+                                </div>
+                                <div class="flex flex-col items-center px-2">
+                                    <span class="text-[11px] font-semibold text-stone-400 mb-1">1h 25p</span>
+                                    <div class="w-16 h-[2px] bg-teal-300 flex items-center justify-center">
+                                        <i data-lucide="plane" class="w-4 h-4 text-teal-600 bg-stone-50 px-0.5"></i>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xl font-extrabold text-stone-900">SGN</p>
+                                    <p class="text-xs text-stone-500">15:55 • TP.HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500">Dự toán vé khứ hồi (3 khách):</span>
+                        <span class="font-extrabold text-stone-900 text-sm">8.750.000 đ</span>
+                    </div>
+                </div>
+
+                <!-- Lưu Trú -->
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/90 shadow-xs editorial-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-orange-100 text-orange-900 text-xs font-bold">Lưu Trú 3 Đêm</span>
+                            <span class="text-xs font-bold text-stone-400">Nhóm 3 khách</span>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/70 mb-3">
+                            <div class="flex items-start justify-between gap-2 mb-1">
+                                <a href="https://www.google.com/maps/place/Amea+Homestay/@16.4692468,107.5704622,18z/data=!4m9!3m8!1s0x3141a6ceab1e2557:0xa16d274f2238e1c4!5m2!4m1!1i2!8m2!3d16.4694973!4d107.5722975!16s%2Fg%2F11z1v4fs03!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MTEwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="font-bold text-stone-900 hover:text-amber-700 text-sm inline-flex items-center gap-1 underline decoration-amber-400/80 underline-offset-2 transition-colors">
+                                    <span>Homestay Amea (Huế)</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                                </a>
+                                <span class="text-xs font-extrabold text-amber-800 whitespace-nowrap">1.498.500 đ</span>
+                            </div>
+                            <p class="text-xs font-semibold text-amber-900/80 mb-1">22/11 – 24/11/2026</p>
+                            <p class="text-xs text-stone-600 leading-relaxed">
+                                Phòng <strong>Suite Gia Đình (28m²)</strong> • 1 giường đôi + 1 giường đôi lớn • Sức chứa 3 khách.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-teal-50/60 border border-teal-200/70">
+                            <div class="flex items-start justify-between gap-2 mb-1">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Fanta+Suite+Villa+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-bold text-stone-900 hover:text-teal-700 text-sm inline-flex items-center gap-1 underline decoration-teal-400/80 underline-offset-2 transition-colors">
+                                    <span>Biệt thự Fanta Suite (Đà Nẵng)</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5 text-teal-600 shrink-0"></i>
+                                </a>
+                                <span class="text-xs font-extrabold text-teal-800 whitespace-nowrap">1.007.202 đ</span>
+                            </div>
+                            <p class="text-xs font-semibold text-teal-900/80 mb-1">24/11 – 25/11/2026 (1 đêm)</p>
+                            <p class="text-xs text-stone-600 leading-relaxed">
+                                Phòng <strong>Studio 3 người (45m²)</strong> • 1 giường đơn + 1 giường lớn • Rộng rãi, gần trung tâm.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500">Tổng tiền phòng 3 đêm:</span>
+                        <span class="font-extrabold text-stone-900 text-sm">2.505.702 đ</span>
+                    </div>
+                </div>
+
+                <!-- Xe VF3 -->
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/90 shadow-xs editorial-card flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-teal-100 text-teal-900 text-xs font-bold">Xe Điện Tự Lái</span>
+                            <span class="text-xs font-bold text-teal-700">2 Ngày Linh Hoạt</span>
+                        </div>
+
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-600 to-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
+                                <i data-lucide="car-front" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-xl text-stone-900">VinFast VF3</h3>
+                                <p class="text-xs font-semibold text-teal-700">700.000 đ/ngày × 2 ngày</p>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-2.5 text-xs text-stone-600 bg-stone-50 p-4 rounded-2xl border border-stone-200/70">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-amber-600 shrink-0 mt-0.5"></i>
+                                <span>Chủ động cầm lái chinh phục cung đường <strong>Huế – Đầm Lập An – Đèo Hải Vân – Đà Nẵng</strong> (~100km) và chạy vào <strong>Hội An</strong> (~30km).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="battery-charging" class="w-4 h-4 text-teal-600 shrink-0 mt-0.5"></i>
+                                <span>Tầm hoạt động ~210km/lần sạc, gập 1 bên ghế sau để xếp gọn 3 vali cabin 20 inch.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500">Tổng phí thuê xe 2 ngày:</span>
+                        <span class="font-extrabold text-stone-900 text-sm">1.400.000 đ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN 2: LỊCH TRÌNH -->
+        <section id="itinerary" class="scroll-mt-24">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700 block mb-1.5">Phần 02 • Đi đâu – Ăn gì – Chơi ở đâu</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Lịch Trình Chi Tiết 4 Ngày 3 Đêm</h2>
+                </div>
+
+                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1" id="day-filter-controls">
+                    <button type="button" onclick="filterDays('all')" data-filter="all" class="filter-btn shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-stone-900 text-white shadow-xs transition-all">
+                        Tất cả (4 Ngày)
+                    </button>
+                    <button type="button" onclick="filterDays('day1')" data-filter="day1" class="filter-btn shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white text-stone-700 border border-stone-200 hover:border-amber-400 transition-all">
+                        Ngày 1 (22/11 • Huế)
+                    </button>
+                    <button type="button" onclick="filterDays('day2')" data-filter="day2" class="filter-btn shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white text-stone-700 border border-stone-200 hover:border-teal-400 transition-all">
+                        Ngày 2 (23/11 • Huế → ĐN)
+                    </button>
+                    <button type="button" onclick="filterDays('day3')" data-filter="day3" class="filter-btn shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white text-stone-700 border border-stone-200 hover:border-orange-400 transition-all">
+                        Ngày 3 (24/11 • ĐN → Hội An)
+                    </button>
+                    <button type="button" onclick="filterDays('day4')" data-filter="day4" class="filter-btn shrink-0 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-white text-stone-700 border border-stone-200 hover:border-emerald-400 transition-all">
+                        Ngày 4 (25/11 • ĐN → SGN)
+                    </button>
+                </div>
+            </div>
+
+            <div class="space-y-12" id="itinerary-container">
+
+                <!-- NGÀY 1 -->
+                <article data-day="day1" class="bg-white rounded-[2rem] border border-stone-200/90 overflow-hidden shadow-xs">
+                    <div class="bg-gradient-to-r from-amber-900 via-amber-800 to-yellow-700 px-6 sm:px-8 py-6 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-lg bg-black/25 text-amber-200 text-xs font-bold uppercase tracking-wider mb-2">
+                                Ngày 1 • Chủ Nhật, 22/11/2026 • Cố Đô Huế
+                            </span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold">Chùa Thiên Mụ, Đại Nội Hoàng Cung & Ẩm Thực Cố Đô</h3>
+                        </div>
+                        <a href="https://www.google.com/maps/place/Amea+Homestay/@16.4692468,107.5704622,18z/data=!4m9!3m8!1s0x3141a6ceab1e2557:0xa16d274f2238e1c4!5m2!4m1!1i2!8m2!3d16.4694973!4d107.5722975!16s%2Fg%2F11z1v4fs03!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MTEwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 text-xs font-semibold shrink-0 self-start sm:self-auto transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-300"></i>
+                            <span>Homestay Amea (Huế)</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5 text-amber-200"></i>
+                        </a>
+                    </div>
+
+                    <div class="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Sáng -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-01.jpg/960px-Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-01.jpg" alt="Chùa Thiên Mụ và Sông Hương Huế"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/78350f/fef3c7?text=Ch%C3%B9a+Thi%C3%AAn+M%E1%BB%A5+-+Hu%E1%BA%BF';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-amber-500 text-stone-950 text-xs font-extrabold shadow">BUỔI SÁNG</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">07:10 – 11:30</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Đáp Sân Bay Phú Bài, Bún Bò & Chùa Thiên Mụ</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0"></span>
+                                            <span><strong>07:10 – 08:35:</strong> Bay Vietjet VJ308 từ SGN → <a href="https://www.google.com/maps/search/?api=1&query=San+bay+quoc+te+Phu+Bai+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Sân bay Phú Bài (HUI)</a>. Gửi hành lý tại <a href="https://www.google.com/maps/place/Amea+Homestay/@16.4692468,107.5704622,18z/data=!4m9!3m8!1s0x3141a6ceab1e2557:0xa16d274f2238e1c4!5m2!4m1!1i2!8m2!3d16.4694973!4d107.5722975!16s%2Fg%2F11z1v4fs03!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MTEwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Homestay Amea</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn sáng & Cà phê:</strong> Thưởng thức <a href="https://www.google.com/maps/search/?api=1&query=Bun+bo+Me+Keo+20+Bach+Dang+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Bún bò Mệ Kéo</a> (20 Bạch Đằng) và <a href="https://www.google.com/maps/search/?api=1&query=Ca+phe+Muoi+142+Dang+Thai+Than+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Cà phê muối 142 Đặng Thái Thân</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0"></span>
+                                            <span><strong>Tham quan:</strong> Vãn cảnh <a href="https://www.google.com/maps/search/?api=1&query=Chua+Thien+Mu+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Chùa Thiên Mụ</a> linh thiêng, ngắm dòng <a href="https://www.google.com/maps/search/?api=1&query=Song+Huong+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">sông Hương</a> êm đềm.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Chua+Thien+Mu+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-100/80 hover:bg-amber-200 text-amber-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Chùa Thiên Mụ</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Bun+bo+Me+Keo+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-100/80 hover:bg-amber-200 text-amber-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Bún bò Mệ Kéo</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Ca+phe+Muoi+142+Dang+Thai+Than+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-100/80 hover:bg-amber-200 text-amber-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Cà phê muối</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chiều -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Palace_of_Supreme_Harmony%2C_Hu%E1%BA%BF_%287073485639%29.jpg/960px-Palace_of_Supreme_Harmony%2C_Hu%E1%BA%BF_%287073485639%29.jpg" alt="Đại Nội Huế Hoàng Thành"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/92400e/fef3c7?text=%C4%90%E1%BA%A1i+N%E1%BB%99i+Hu%E1%BA%BF';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-orange-600 text-white text-xs font-extrabold shadow">BUỔI CHIỀU</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">12:00 – 17:30</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Cơm Hến Cồn Hến, Đại Nội & Cung An Định</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn trưa:</strong> Đậm đà vị Huế với <a href="https://www.google.com/maps/search/?api=1&query=Com+hen+Hoa+Dong+64+Ung+Binh+Con+Hen+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Cơm hến Hoa Đông</a> (Cồn Hến).</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0"></span>
+                                            <span><strong>Tham quan:</strong> Khám phá <a href="https://www.google.com/maps/search/?api=1&query=Dai+Noi+Hue+Hoang+Thanh" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Đại Nội Huế (Hoàng Thành)</a> và check-in kiến trúc Pháp cổ tại <a href="https://www.google.com/maps/search/?api=1&query=Cung+An+Dinh+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Cung An Định</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn xế:</strong> Bộ ba bánh bèo – nậm – lọc nóng hổi tại <a href="https://www.google.com/maps/search/?api=1&query=Quan+Banh+Beo+Ba+Do+8+Nguyen+Binh+Khiem+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Quán Bà Đỏ</a> hoặc <a href="https://www.google.com/maps/search/?api=1&query=Banh+beo+Hang+Me+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Hàng Me</a>.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Dai+Noi+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-orange-100/80 hover:bg-orange-200 text-orange-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Đại Nội Huế</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Cung+An+Dinh+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-orange-100/80 hover:bg-orange-200 text-orange-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Cung An Định</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Quan+Banh+Beo+Ba+Do+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-orange-100/80 hover:bg-orange-200 text-orange-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Bánh bèo Bà Đỏ</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tối -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Truong_Tien_bridge_%28I%29.jpg/960px-Truong_Tien_bridge_%28I%29.jpg" alt="Ẩm thực đêm cố đô Huế"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/451a03/fef3c7?text=%E1%BA%A8m+Th%E1%BB%B1c+%C4%90%C3%AAm+Hu%E1%BA%BF';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-stone-900 text-amber-300 text-xs font-extrabold shadow">BUỔI TỐI</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">18:30 – 22:00</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Nem Lụi, Cầu Trường Tiền & Chè Hẻm 20 Món</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn tối:</strong> Nem lụi & Bánh khoái giòn rụm tại <a href="https://www.google.com/maps/search/?api=1&query=Quan+Hanh+11+Pho+Duc+Chinh+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">Quán Hạnh</a> (11 Phó Đức Chính) hoặc <a href="https://www.google.com/maps/search/?api=1&query=Nem+lui+Tai+Phu+2+Dien+Bien+Phu+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">Tài Phú</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Dạo đêm:</strong> Tản bộ ngắm đèn <a href="https://www.google.com/maps/search/?api=1&query=Cau+Truong+Tien+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">Cầu Trường Tiền</a> và <a href="https://www.google.com/maps/search/?api=1&query=Pho+di+bo+Nguyen+Dinh+Chieu+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">Phố đi bộ Nguyễn Đình Chiểu</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Tráng miệng:</strong> Ghé <a href="https://www.google.com/maps/search/?api=1&query=Che+Hem+1+Kiet+29+Hung+Vuong+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">Chè Hẻm 20 món</a> (kiệt 29 Hùng Vương) thử chè bột lọc heo quay.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Quan+Hanh+11+Pho+Duc+Chinh+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Quán Hạnh</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Cau+Truong+Tien+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Cầu Trường Tiền</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Che+Hem+29+Hung+Vuong+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Chè Hẻm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NGÀY 2 -->
+                <article data-day="day2" class="bg-white rounded-[2rem] border border-stone-200/90 overflow-hidden shadow-xs">
+                    <div class="bg-gradient-to-r from-teal-900 via-teal-800 to-cyan-700 px-6 sm:px-8 py-6 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-lg bg-black/25 text-teal-200 text-xs font-bold uppercase tracking-wider mb-2">
+                                Ngày 2 • Thứ Hai, 23/11/2026 • Huế → Đèo Hải Vân → Đà Nẵng
+                            </span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold">Lăng Tẩm Cố Đô, Chinh Phục Đèo Hải Vân & Biển Ngọc Đà Nẵng</h3>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/Hue/Dam+Lap+An/Deo+Hai+Van/Da+Nang" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 text-xs font-semibold shrink-0 self-start sm:self-auto transition-colors">
+                            <i data-lucide="navigation" class="w-4 h-4 text-teal-300"></i>
+                            <span>Lộ trình VF3 (~100km)</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5 text-teal-200"></i>
+                        </a>
+                    </div>
+
+                    <div class="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Sáng -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Khai_Dinh_Tomb_%2838687487370%29.jpg/960px-Khai_Dinh_Tomb_%2838687487370%29.jpg" alt="Lăng Khải Định và Lăng Minh Mạng Huế"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/115e59/ccfbf1?text=L%C4%83ng+Kh%E1%BA%A3i+%C4%90%E1%BB%8Bnh+-+L%C3%A0ng+H%C6%B0%C6%A1ng';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-teal-600 text-white text-xs font-extrabold shadow">BUỔI SÁNG</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">07:30 – 12:00</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Lăng Khải Định, Minh Mạng & Làng Hương Thủy Xuân</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn sáng:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Banh+canh+Nam+Pho+Thuy+16+Pham+Hong+Thai+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-800 hover:text-teal-600 underline decoration-teal-300 underline-offset-2">Bánh canh Nam Phổ Thúy</a> hoặc <a href="https://www.google.com/maps/search/?api=1&query=Banh+mi+Truong+Tien+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-800 hover:text-teal-600 underline decoration-teal-300 underline-offset-2">Bánh mì Trường Tiền</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
+                                            <span><strong>Tham quan:</strong> Chiêm ngưỡng kiến trúc tinh xảo của <a href="https://www.google.com/maps/search/?api=1&query=Lang+Khai+Dinh+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-800 hover:text-teal-600 underline decoration-teal-300 underline-offset-2">Lăng Khải Định</a> và <a href="https://www.google.com/maps/search/?api=1&query=Lang+Minh+Mang+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-800 hover:text-teal-600 underline decoration-teal-300 underline-offset-2">Lăng Minh Mạng</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2 shrink-0"></span>
+                                            <span><strong>Check-in:</strong> Sắc màu rực rỡ tại <a href="https://www.google.com/maps/search/?api=1&query=Lang+Huong+Thuy+Xuan+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-800 hover:text-teal-600 underline decoration-teal-300 underline-offset-2">Làng Hương Thủy Xuân</a> & <a href="https://www.google.com/maps/search/?api=1&query=Doi+Vong+Canh+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-800 hover:text-teal-600 underline decoration-teal-300 underline-offset-2">Đồi Vọng Cảnh</a>.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Lang+Khai+Dinh+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-teal-100/80 hover:bg-teal-200 text-teal-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Lăng Khải Định</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Lang+Huong+Thuy+Xuan+Hue" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-teal-100/80 hover:bg-teal-200 text-teal-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Làng Hương Thủy Xuân</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chiều -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Hai_Van_Pass%2C_Vietnam.jpg/960px-Hai_Van_Pass%2C_Vietnam.jpg" alt="Đèo Hải Vân và Đầm Lập An"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/0e7490/cffafe?text=%C4%90%C3%A8o+H%E1%BA%A3i+V%C3%A2n+-+S%C6%A1n+Tr%C3%A0';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-cyan-600 text-white text-xs font-extrabold shadow">BUỔI CHIỀU</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">12:00 – 18:00</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Đầm Lập An, Đèo Hải Vân & Bán Đảo Sơn Trà</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-600 mt-2 shrink-0"></span>
+                                            <span><strong>Cung đường biển:</strong> Lái VF3 qua <a href="https://www.google.com/maps/search/?api=1&query=Dam+Lap+An+Lang+Co+Hue" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-800 hover:text-cyan-600 underline decoration-cyan-300 underline-offset-2">Đầm Lập An</a>, ăn hải sản tại <a href="https://www.google.com/maps/search/?api=1&query=Nha+hang+hai+san+Be+Den+Lang+Co" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-800 hover:text-cyan-600 underline decoration-cyan-300 underline-offset-2">Bé Đen Lăng Cô</a>, chinh phục <a href="https://www.google.com/maps/search/?api=1&query=Hai+Van+Quan+Deo+Hai+Van" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-800 hover:text-cyan-600 underline decoration-cyan-300 underline-offset-2">Hải Vân Quan</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-600 mt-2 shrink-0"></span>
+                                            <span><strong>Bán đảo Sơn Trà:</strong> Viếng <a href="https://www.google.com/maps/search/?api=1&query=Chua+Linh+Ung+Bai+But+Son+Tra+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-800 hover:text-cyan-600 underline decoration-cyan-300 underline-offset-2">Chùa Linh Ứng Bãi Bụt</a> và ngắm hoàng hôn từ <a href="https://www.google.com/maps/search/?api=1&query=Dinh+Ban+Co+Son+Tra+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-800 hover:text-cyan-600 underline decoration-cyan-300 underline-offset-2">Đỉnh Bàn Cờ</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-600 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn xế:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Banh+trang+cuon+thit+heo+Tran+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-800 hover:text-cyan-600 underline decoration-cyan-300 underline-offset-2">Bánh tráng cuốn thịt heo Trần</a> Đà Nẵng.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Dam+Lap+An+Lang+Co" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-cyan-100/80 hover:bg-cyan-200 text-cyan-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Đầm Lập An</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Hai+Van+Quan+Deo+Hai+Van" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-cyan-100/80 hover:bg-cyan-200 text-cyan-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Đèo Hải Vân</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Chua+Linh+Ung+Son+Tra+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-cyan-100/80 hover:bg-cyan-200 text-cyan-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Chùa Linh Ứng</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tối -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Da_Nang_Dragon_Bridge_2020_IMG_3909.jpg/960px-Da_Nang_Dragon_Bridge_2020_IMG_3909.jpg" alt="Cầu Rồng và Biển Đà Nẵng về đêm"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/164e63/ecfeff?text=C%E1%BA%A7u+R%E1%BB%93ng+%C4%90%C3%A0+N%E1%BA%B5ng';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-stone-900 text-teal-300 text-xs font-extrabold shadow">BUỔI TỐI</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">19:00 – 22:00</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Biển Mỹ Khê, Cầu Rồng, Hải Sản & Kem Bơ</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn tối:</strong> Đại tiệc hải sản tươi sống Đà Nẵng tại <a href="https://www.google.com/maps/search/?api=1&query=Hai+san+Be+Man+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-teal-700 underline decoration-stone-400 underline-offset-2">Hải sản Bé Mặn</a> hoặc <a href="https://www.google.com/maps/search/?api=1&query=Hai+san+Nam+Danh+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-teal-700 underline decoration-stone-400 underline-offset-2">Năm Đảnh</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Dạo phố đêm:</strong> Hóng gió <a href="https://www.google.com/maps/search/?api=1&query=Bien+My+Khe+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-teal-700 underline decoration-stone-400 underline-offset-2">Biển Mỹ Khê</a>, check-in <a href="https://www.google.com/maps/search/?api=1&query=Cau+Rong+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-teal-700 underline decoration-stone-400 underline-offset-2">Cầu Rồng</a> & <a href="https://www.google.com/maps/search/?api=1&query=Cau+Tinh+Yeu+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-teal-700 underline decoration-stone-400 underline-offset-2">Cầu Tình Yêu</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn vặt:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Kem+bo+Co+Van+Cho+Bac+My+An+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-teal-700 underline decoration-stone-400 underline-offset-2">Kem bơ Cô Vân</a> béo ngậy tại chợ Bắc Mỹ An.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Hai+san+Be+Man+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Hải sản Bé Mặn</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Cau+Rong+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Cầu Rồng</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Kem+bo+Co+Van+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Kem bơ Cô Vân</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NGÀY 3 -->
+                <article data-day="day3" class="bg-white rounded-[2rem] border border-stone-200/90 overflow-hidden shadow-xs">
+                    <div class="bg-gradient-to-r from-orange-800 via-amber-700 to-orange-600 px-6 sm:px-8 py-6 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-lg bg-black/25 text-amber-200 text-xs font-bold uppercase tracking-wider mb-2">
+                                Ngày 3 • Thứ Ba, 24/11/2026 • Đà Nẵng → Phố Cổ Hội An
+                            </span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold">Ngũ Hành Sơn, Rừng Dừa Bảy Mẫu & Đêm Hoa Đăng Phố Cổ</h3>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Fanta+Suite+Villa+Da+Nang" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 text-xs font-semibold shrink-0 self-start sm:self-auto transition-colors">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-amber-200"></i>
+                            <span>Biệt thự Fanta Suite (ĐN)</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5 text-amber-200"></i>
+                        </a>
+                    </div>
+
+                    <div class="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Sáng -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Da_Nang_Marble_Mountains_2020_IMG_4008.jpg/960px-Da_Nang_Marble_Mountains_2020_IMG_4008.jpg" alt="Danh thắng Ngũ Hành Sơn Đà Nẵng"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/c2410c/ffedd5?text=Ng%C5%A9+H%C3%A0nh+S%C6%A1n';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-orange-600 text-white text-xs font-extrabold shadow">BUỔI SÁNG</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">08:00 – 11:30</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Mì Quảng Đà Thành & Danh Thắng Ngũ Hành Sơn</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn sáng:</strong> Thưởng thức tô Mì Quảng đậm đà tại <a href="https://www.google.com/maps/search/?api=1&query=Mi+Quang+Ba+Mua+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Mì Quảng Bà Mua</a> hoặc <a href="https://www.google.com/maps/search/?api=1&query=Mi+Quang+Ech+Bep+Trang+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Bếp Trang</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-orange-600 mt-2 shrink-0"></span>
+                                            <span><strong>Tham quan:</strong> Khám phá kỳ quan <a href="https://www.google.com/maps/search/?api=1&query=Danh+thang+Ngu+Hanh+Son+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Ngũ Hành Sơn</a> (Động Huyền Không, Chùa Tam Thái) hoặc lựa chọn đi <a href="https://www.google.com/maps/search/?api=1&query=Sun+World+Ba+Na+Hills+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-800 hover:text-orange-600 underline decoration-orange-300 underline-offset-2">Bà Nà Hills</a> trọn ngày.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Danh+thang+Ngu+Hanh+Son+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-orange-100/80 hover:bg-orange-200 text-orange-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Ngũ Hành Sơn</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Mi+Quang+Ba+Mua+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-orange-100/80 hover:bg-orange-200 text-orange-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Mì Quảng Bà Mua</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chiều -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-02.jpg/960px-H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-02.jpg" alt="Phố cổ Hội An và Rừng dừa Bảy Mẫu"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/b45309/fef3c7?text=Ph%E1%BB%91+C%E1%BB%95+H%E1%BB%99i+An';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-amber-500 text-stone-950 text-xs font-extrabold shadow">BUỔI CHIỀU</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">12:00 – 18:00</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Rừng Dừa Bảy Mẫu, Phố Cổ Hội An & Trà Mót</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0"></span>
+                                            <span><strong>12:00:</strong> Di chuyển vào Hội An (~30km), ăn trưa <a href="https://www.google.com/maps/search/?api=1&query=Com+ga+Ba+Buoi+22+Phan+Chu+Trinh+Hoi+An" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Cơm gà Bà Buội</a> (22 Phan Chu Trinh).</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0"></span>
+                                            <span><strong>Trải nghiệm:</strong> Ngồi thuyền thúng len lỏi <a href="https://www.google.com/maps/search/?api=1&query=Rung+dua+Bay+Mau+Cam+Thanh+Hoi+An" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Rừng dừa Bảy Mẫu</a> xanh mát.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-amber-600 mt-2 shrink-0"></span>
+                                            <span><strong>16:00 Dạo Phố Cổ:</strong> Check-in <a href="https://www.google.com/maps/search/?api=1&query=Chua+Cau+Hoi+An" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Chùa Cầu</a>, thưởng thức <a href="https://www.google.com/maps/search/?api=1&query=Mot+Hoi+An+150+Tran+Phu" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Trà Mót Hội An</a>, <a href="https://www.google.com/maps/search/?api=1&query=Banh+mi+Phuong+2B+Phan+Chu+Trinh+Hoi+An" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Bánh mì Phượng</a> & <a href="https://www.google.com/maps/search/?api=1&query=Cao+lau+Thanh+26+Thai+Phien+Hoi+An" target="_blank" rel="noopener noreferrer" class="font-semibold text-amber-800 hover:text-amber-600 underline decoration-amber-300 underline-offset-2">Cao lầu Thanh</a>.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Rung+dua+Bay+Mau+Hoi+An" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-100/80 hover:bg-amber-200 text-amber-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Rừng dừa Bảy Mẫu</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Chua+Cau+Hoi+An" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-100/80 hover:bg-amber-200 text-amber-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Chùa Cầu</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Banh+mi+Phuong+Hoi+An" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-100/80 hover:bg-amber-200 text-amber-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Bánh mì Phượng</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tối -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Lanterns_in_Hoi_An_3.jpg/960px-Lanterns_in_Hoi_An_3.jpg" alt="Thả đèn hoa đăng sông Hoài Hội An"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/7c2d12/ffedd5?text=%C4%90%C3%AAm+Hoa+%C4%90%C4%83ng+H%E1%BB%99i+An';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-stone-900 text-amber-300 text-xs font-extrabold shadow">BUỔI TỐI</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">18:30 – 21:30</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Phố Đèn Lồng, Thả Hoa Đăng & Bánh Bao Bánh Vạc</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Đêm Hội An:</strong> Ngắm <a href="https://www.google.com/maps/search/?api=1&query=Pho+co+Hoi+An" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">Phố cổ Hội An</a> lên đèn và ngồi thuyền thả hoa đăng trên <a href="https://www.google.com/maps/search/?api=1&query=Song+Hoai+Hoi+An" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">sông Hoài</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn tối:</strong> Đặc sản <a href="https://www.google.com/maps/search/?api=1&query=Nha+hang+Bong+Hong+Trang+533+Hai+Ba+Trung+Hoi+An" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">Bánh bao bánh vạc (Bông Hồng Trắng)</a> & Chè bắp Cẩm Nam.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>Nghỉ đêm:</strong> Chạy xe VF3 về Đà Nẵng nhận phòng <a href="https://www.google.com/maps/search/?api=1&query=Fanta+Suite+Villa+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-amber-700 underline decoration-stone-400 underline-offset-2">Biệt thự Fanta Suite</a>.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Song+Hoai+Hoi+An" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Sông Hoài</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Nha+hang+Bong+Hong+Trang+Hoi+An" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Bông Hồng Trắng</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Fanta+Suite+Villa+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Fanta Suite</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NGÀY 4 -->
+                <article data-day="day4" class="bg-white rounded-[2rem] border border-stone-200/90 overflow-hidden shadow-xs">
+                    <div class="bg-gradient-to-r from-emerald-900 via-teal-800 to-stone-800 px-6 sm:px-8 py-6 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-lg bg-black/25 text-emerald-200 text-xs font-bold uppercase tracking-wider mb-2">
+                                Ngày 4 • Thứ Tư, 25/11/2026 • Đà Nẵng → TP.HCM
+                            </span>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold">Đặc Sản Đà Thành, Mua Quà Chợ Hàn & Bay Về Sài Gòn</h3>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=San+bay+quoc+te+Da+Nang" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 text-xs font-semibold shrink-0 self-start sm:self-auto transition-colors">
+                            <i data-lucide="plane-takeoff" class="w-4 h-4 text-emerald-300"></i>
+                            <span>Sân bay DAD • VJ631</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5 text-emerald-200"></i>
+                        </a>
+                    </div>
+
+                    <div class="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Sáng -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Han_Market_-_Da_Nang%2C_Vietnam_-_DSC02375.JPG/960px-Han_Market_-_Da_Nang%2C_Vietnam_-_DSC02375.JPG" alt="Bún mắm nêm và Bánh xèo Bà Dưỡng Đà Nẵng"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/065f46/d1fae5?text=%E1%BA%A8m+Th%E1%BB%B1c+%C4%90%C3%A0+N%E1%BA%B5ng';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-emerald-600 text-white text-xs font-extrabold shadow">BUỔI SÁNG</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">07:30 – 11:30</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Bún Mắm Bà Thuyên, Chợ Cồn / Chợ Hàn & Cà Phê Bạch Đằng</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
+                                            <span><strong>Ăn sáng:</strong> Thưởng thức <a href="https://www.google.com/maps/search/?api=1&query=Bun+mam+Ba+Thuyen+K424+Le+Duan+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-800 hover:text-emerald-600 underline decoration-emerald-300 underline-offset-2">Bún mắm nêm Bà Thuyên</a> hoặc <a href="https://www.google.com/maps/search/?api=1&query=Banh+xeo+Ba+Duong+K280+Hoang+Dieu+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-800 hover:text-emerald-600 underline decoration-emerald-300 underline-offset-2">Bánh xèo Bà Dưỡng</a>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
+                                            <span><strong>Mua quà đặc sản:</strong> Dạo <a href="https://www.google.com/maps/search/?api=1&query=Cho+Con+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-800 hover:text-emerald-600 underline decoration-emerald-300 underline-offset-2">Chợ Cồn</a> / <a href="https://www.google.com/maps/search/?api=1&query=Cho+Han+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-800 hover:text-emerald-600 underline decoration-emerald-300 underline-offset-2">Chợ Hàn</a> mua <em>tré Bà Đệ, chả bò Đà Nẵng, mực rim me</em>.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
+                                            <span><strong>Thư giãn:</strong> Ngồi cà phê ngắm sông Hàn dọc đường <a href="https://www.google.com/maps/search/?api=1&query=Duong+Bach+Dang+Hai+Chau+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-800 hover:text-emerald-600 underline decoration-emerald-300 underline-offset-2">Bạch Đằng</a>.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Banh+xeo+Ba+Duong+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-100/80 hover:bg-emerald-200 text-emerald-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Bánh xèo Bà Dưỡng</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Cho+Han+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-100/80 hover:bg-emerald-200 text-emerald-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Chợ Hàn</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Cho+Con+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-100/80 hover:bg-emerald-200 text-emerald-950 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Chợ Cồn</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trưa & Chiều -->
+                        <div class="rounded-2xl border border-stone-200/80 bg-stone-50/50 overflow-hidden flex flex-col editorial-card">
+                            <div class="relative h-52 overflow-hidden group">
+                                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_06.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_06.jpg" alt="Sân bay Quốc tế Đà Nẵng về TP.HCM"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/1000x600/1e293b/f8fafc?text=S%C3%A2n+Bay+%C4%90%C3%A0+N%E1%BA%B5ng';"
+                                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-3 py-1 rounded-lg bg-stone-900 text-emerald-300 text-xs font-extrabold shadow">BUỔI TRƯA & CHIỀU</span>
+                                <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-stone-950/75 text-white text-xs font-semibold backdrop-blur-xs">11:30 – 15:55</span>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                                <div class="space-y-3">
+                                    <h4 class="font-serif text-lg font-bold text-stone-900">Trả Phòng, Trả Xe VF3 & Bay Chuyến VJ631 Về Sài Gòn</h4>
+                                    <ul class="space-y-2.5 text-xs sm:text-sm text-stone-600 leading-relaxed">
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>11:30 – 12:00:</strong> Trả phòng <a href="https://www.google.com/maps/search/?api=1&query=Fanta+Suite+Villa+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-emerald-700 underline decoration-stone-400 underline-offset-2">Biệt thự Fanta Suite</a>, ăn trưa nhẹ gần khu vực sân bay.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>12:45:</strong> Có mặt tại <a href="https://www.google.com/maps/search/?api=1&query=San+bay+quoc+te+Da+Nang" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-emerald-700 underline decoration-stone-400 underline-offset-2">Sân bay Quốc tế Đà Nẵng (DAD)</a> bàn giao trả xe và làm thủ tục.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-stone-800 mt-2 shrink-0"></span>
+                                            <span><strong>14:30 – 15:55:</strong> Bay chuyến <strong>DAD → <a href="https://www.google.com/maps/search/?api=1&query=San+bay+quoc+te+Tan+Son+Nhat" target="_blank" rel="noopener noreferrer" class="font-semibold text-stone-900 hover:text-emerald-700 underline decoration-stone-400 underline-offset-2">SGN (Tân Sơn Nhất)</a> (VJ631)</strong>, kết thúc hành trình di sản trọn vẹn!</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 border-t border-stone-200/70 flex flex-wrap gap-1.5">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=San+bay+quoc+te+Da+Nang" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Sân bay Đà Nẵng (DAD)</a>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=San+bay+quoc+te+Tan+Son+Nhat" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-900 text-[11px] font-bold transition-colors"><i data-lucide="map-pin" class="w-3 h-3"></i> Sân bay Tân Sơn Nhất</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PHẦN 3: CHI PHÍ -->
+        <section id="budget" class="scroll-mt-24 mb-10">
+            <div class="max-w-3xl mb-10">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-700 block mb-1.5">Phần 03 • Dự toán minh bạch</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mb-3">Bảng Chia Tiền Chi Phí Cố Định</h2>
+                <p class="text-sm sm:text-base text-stone-600">
+                    Toàn bộ chi phí cố định (Vé bay khứ hồi, Homestay Amea, Biệt thự Fanta Suite, Thuê xe VF3 2 ngày) đã được cập nhật sẵn. Bạn có thể tinh chỉnh giá vé thực tế để chia bình quân ngay số tiền cần thu trước của mỗi người.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-7 bg-white rounded-[2rem] p-6 sm:p-8 border border-stone-200/90 shadow-xs space-y-6">
+
+                    <div class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-amber-50/90 border border-amber-200/90">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500 text-stone-950 flex items-center justify-center font-bold">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-stone-900 text-sm">Số người chia chi phí</p>
+                                <p class="text-xs text-stone-500">Mặc định nhóm 3 người lớn</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-2.5 py-1.5 rounded-xl border border-stone-200">
+                            <button type="button" onclick="adjustPeople(-1)" class="w-8 h-8 rounded-lg bg-stone-100 hover:bg-stone-200 font-bold text-stone-700 flex items-center justify-center transition-colors">−</button>
+                            <input type="number" id="input-people" value="3" min="1" max="20" onchange="recalculateBudget()" class="w-12 text-center font-extrabold text-stone-900 text-base focus:outline-none">
+                            <button type="button" onclick="adjustPeople(1)" class="w-8 h-8 rounded-lg bg-stone-100 hover:bg-stone-200 font-bold text-stone-700 flex items-center justify-center transition-colors">+</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-base text-stone-900 flex items-center gap-2 mb-4">
+                            <i data-lucide="receipt" class="w-4 h-4 text-amber-600"></i>
+                            <span>Các Khoản Cố Định (Vé Máy Bay, Khách Sạn & Thuê Xe)</span>
+                        </h3>
+
+                        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 mb-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                                <div>
+                                    <p class="font-bold text-stone-900 text-sm">Vé máy bay khứ hồi Vietjet (3 người)</p>
+                                    <p class="text-xs text-stone-500">Điều chỉnh trong khoảng 8.500.000 – 9.000.000 đ</p>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <input type="number" id="input-flight" value="8750000" step="50000" oninput="onFlightInput()" class="w-32 px-3 py-1.5 rounded-xl border border-stone-300 bg-white text-right font-bold text-sm text-stone-900 focus:outline-none focus:border-amber-500">
+                                    <span class="text-xs font-bold text-stone-500">đ</span>
+                                </div>
+                            </div>
+                            <input type="range" id="range-flight" min="8500000" max="9000000" step="50000" value="8750000" oninput="onFlightRange()" class="w-full accent-amber-600 cursor-pointer">
+                        </div>
+
+                        <div class="divide-y divide-stone-100 text-sm px-1">
+                            <div class="py-3 flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="font-bold text-stone-900">Homestay Amea (Huế – 2 đêm)</p>
+                                    <p class="text-xs text-stone-500">Suite Gia Đình (28m², 2 giường đôi)</p>
+                                </div>
+                                <span class="font-bold text-stone-900 whitespace-nowrap">1.498.500 đ</span>
+                            </div>
+                            <div class="py-3 flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="font-bold text-stone-900">Biệt thự Fanta Suite (Đà Nẵng – 1 đêm)</p>
+                                    <p class="text-xs text-stone-500">Phòng Studio 3 người (45m²)</p>
+                                </div>
+                                <span class="font-bold text-stone-900 whitespace-nowrap">1.007.202 đ</span>
+                            </div>
+                            <div class="py-3 flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="font-bold text-stone-900">Thuê xe điện VinFast VF3</p>
+                                    <p class="text-xs text-stone-500">2 ngày × 700.000 đ/ngày</p>
+                                </div>
+                                <span class="font-bold text-stone-900 whitespace-nowrap">1.400.000 đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-stone-900 text-white rounded-[2rem] p-6 sm:p-8 shadow-xl">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider">Tổng kết ngân sách</span>
+                        <span id="badge-people-count" class="text-xs font-semibold text-stone-300">Chia đều 3 người</span>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-gradient-to-br from-amber-400 via-amber-500 to-orange-500 text-stone-950 shadow-lg mb-5">
+                        <p class="text-xs font-extrabold uppercase tracking-wider text-stone-900/80 mb-1">Tổng Cố Định (Vé bay + Phòng + Xe VF3)</p>
+                        <p id="out-fixed-total" class="text-3xl sm:text-4xl font-extrabold tracking-tight">12.655.702 đ</p>
+                        <div class="mt-3.5 pt-3.5 border-t border-stone-950/15 flex items-center justify-between gap-2">
+                            <span class="text-xs font-extrabold text-stone-900">Chia bình quân mỗi người:</span>
+                            <span id="out-fixed-pp" class="text-lg sm:text-xl font-extrabold bg-stone-950 text-amber-300 px-3.5 py-1 rounded-xl">4.218.567 đ</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-stone-400 leading-relaxed flex items-start gap-2">
+                        <i data-lucide="info" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                        <span>Khoản cố định dao động <strong>12.405.702 – 12.905.702 đ</strong> (~4,13 – 4,30 triệu/người) tùy thuộc mức phí xuất vé khứ hồi Vietjet. Bạn thu trước số tiền này để thanh toán các đặt chỗ.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popup Modal Hiển Thị Ảnh Địa Điểm -->
+        <div id="place-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+            <div class="absolute inset-0 bg-stone-900/70 backdrop-blur-sm" onclick="closePlaceModal()"></div>
+            <div class="relative bg-white rounded-[2rem] w-full max-w-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="place-modal-content">
+                <div class="px-6 py-5 border-b border-stone-100 flex items-center justify-between bg-stone-50">
+                    <h3 id="modal-place-title" class="font-serif text-xl sm:text-2xl font-bold text-stone-900 pr-4 line-clamp-1">Tên Địa Điểm</h3>
+                    <button onclick="closePlaceModal()" class="w-8 h-8 shrink-0 rounded-full bg-stone-200 hover:bg-stone-300 flex items-center justify-center text-stone-600 transition-colors">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <p class="text-sm font-semibold text-stone-500 mb-4 flex items-center gap-1.5">
+                        <i data-lucide="image" class="w-4 h-4"></i> Hình ảnh tham khảo (Wikimedia Commons)
+                    </p>
+                    <div class="grid grid-cols-2 gap-3" id="modal-gallery"></div>
+                </div>
+                <div class="px-6 py-5 border-t border-stone-100 bg-stone-50 flex justify-end">
+                    <a id="modal-map-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-sm transition-colors shadow-lg shadow-teal-600/20">
+                        <i data-lucide="map" class="w-4 h-4"></i>
+                        <span>Chỉ đường trên Google Maps</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-stone-950 text-stone-400 py-10 border-t border-stone-800 mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <div class="flex items-center gap-2 text-white font-serif font-bold text-base">
+                <i data-lucide="compass" class="w-5 h-5 text-amber-400"></i>
+                <span>Hành Trình Di Sản Miền Trung 2026</span>
+            </div>
+            <p>Huế – Đà Nẵng – Hội An • 4 Ngày 3 Đêm (22/11 – 25/11/2026) • Nhóm 3 Người Lớn</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const placeModal = document.getElementById('place-modal');
+        const placeModalContent = document.getElementById('place-modal-content');
+        const modalTitle = document.getElementById('modal-place-title');
+        const modalGallery = document.getElementById('modal-gallery');
+        const modalMapLink = document.getElementById('modal-map-link');
+
+        // Ảnh theo từng địa điểm (nguồn: Wikimedia Commons)
+        const PLACE_IMAGES = {
+    "thiên mụ": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-01.jpg/960px-Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-01.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-04.jpg/960px-Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-04.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Banh_beo_Thien_Mu.jpg/960px-Banh_beo_Thien_Mu.jpg"
+    ],
+    "sông hương": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Hue_Vietnam_Perfume-River-01.jpg/960px-Hue_Vietnam_Perfume-River-01.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-01.jpg/960px-Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-01.jpg"
+    ],
+    "đại nội": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Palace_of_Supreme_Harmony%2C_Hu%E1%BA%BF_%287073485639%29.jpg/960px-Palace_of_Supreme_Harmony%2C_Hu%E1%BA%BF_%287073485639%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Meridian_Gate%2C_Hue_%28I%29.jpg/960px-Meridian_Gate%2C_Hue_%28I%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Hu%E1%BA%BF_%282024%29_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_%28Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF%29_-_img_07.jpg/960px-Hu%E1%BA%BF_%282024%29_-_Meridian_Gate_-_Ng%E1%BB%8D_M%C3%B4n_%28Ho%C3%A0ng_th%C3%A0nh_Hu%E1%BA%BF%29_-_img_07.jpg"
+    ],
+    "cung an định": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/An_Dinh_Palace_-_Cung_An_%C4%90%E1%BB%8Bnh_%282024%29_-_front_facade_-_img_04.jpg/960px-An_Dinh_Palace_-_Cung_An_%C4%90%E1%BB%8Bnh_%282024%29_-_front_facade_-_img_04.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/An_Dinh_Palace_-_Cung_An_%C4%90%E1%BB%8Bnh_%282024%29_-_front_facade_-_img_05.jpg/960px-An_Dinh_Palace_-_Cung_An_%C4%90%E1%BB%8Bnh_%282024%29_-_front_facade_-_img_05.jpg"
+    ],
+    "trường tiền": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Truong_Tien_bridge_%28I%29.jpg/960px-Truong_Tien_bridge_%28I%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/2024-07_C%E1%BA%A7u_Tr%C6%B0%E1%BB%9Dng_Ti%E1%BB%81n_-_Truong_Tien_Bridge_-_Hu%E1%BA%BF_-_img_09.jpg/960px-2024-07_C%E1%BA%A7u_Tr%C6%B0%E1%BB%9Dng_Ti%E1%BB%81n_-_Truong_Tien_Bridge_-_Hu%E1%BA%BF_-_img_09.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/2024-07_C%E1%BA%A7u_Tr%C6%B0%E1%BB%9Dng_Ti%E1%BB%81n_-_Truong_Tien_Bridge_-_Hu%E1%BA%BF_-_img_11.jpg/960px-2024-07_C%E1%BA%A7u_Tr%C6%B0%E1%BB%9Dng_Ti%E1%BB%81n_-_Truong_Tien_Bridge_-_Hu%E1%BA%BF_-_img_11.jpg"
+    ],
+    "khải định": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Khai_Dinh_Tomb_%2838687487370%29.jpg/960px-Khai_Dinh_Tomb_%2838687487370%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Hu%E1%BA%BF_%282024%29_-_Mausoleum_of_Emperor_Kh%E1%BA%A3i_%C4%90%E1%BB%8Bnh_-_exterior_-_img_01.jpg/960px-Hu%E1%BA%BF_%282024%29_-_Mausoleum_of_Emperor_Kh%E1%BA%A3i_%C4%90%E1%BB%8Bnh_-_exterior_-_img_01.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Emperor_Khai_Dinh_in_Hue_%2839543600561%29.jpg/960px-Emperor_Khai_Dinh_in_Hue_%2839543600561%29.jpg"
+    ],
+    "minh mạng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Hue_Vietnam_Tomb-of-Emperor-Minh-Mang-01.jpg/960px-Hue_Vietnam_Tomb-of-Emperor-Minh-Mang-01.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Hue_Vietnam_Tomb-of-Emperor-Minh-Mang-03a.jpg/960px-Hue_Vietnam_Tomb-of-Emperor-Minh-Mang-03a.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Hue_Vietnam_Tomb-of-Emperor-Minh-Mang-09.jpg/960px-Hue_Vietnam_Tomb-of-Emperor-Minh-Mang-09.jpg"
+    ],
+    "bún bò": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/B%C3%BAn_b%C3%B2_Hu%E1%BA%BF_minh28397.jpg/960px-B%C3%BAn_b%C3%B2_Hu%E1%BA%BF_minh28397.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Bun-Bo-Hue-from-Huong-Giang-2011.jpg/960px-Bun-Bo-Hue-from-Huong-Giang-2011.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/B%C3%BAn_b%C3%B2_Hu%E1%BA%BF_%2820201109%29.jpg/960px-B%C3%BAn_b%C3%B2_Hu%E1%BA%BF_%2820201109%29.jpg"
+    ],
+    "cơm hến": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Com_Hen_at_Hue_Vietnam.JPG/960px-Com_Hen_at_Hue_Vietnam.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/H%E1%BA%BFn_tr%E1%BB%99n.jpg/960px-H%E1%BA%BFn_tr%E1%BB%99n.jpg"
+    ],
+    "bánh bèo": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/B%C3%A1nh_b%C3%A8o_ch%C3%A9n.jpg/960px-B%C3%A1nh_b%C3%A8o_ch%C3%A9n.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Banh_beo_Thien_Mu.jpg/960px-Banh_beo_Thien_Mu.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/d3/B%C3%A1nh_b%C3%A8o.jpg"
+    ],
+    "hàng me": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/B%C3%A1nh_b%C3%A8o_ch%C3%A9n.jpg/960px-B%C3%A1nh_b%C3%A8o_ch%C3%A9n.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Banh_beo_Thien_Mu.jpg/960px-Banh_beo_Thien_Mu.jpg"
+    ],
+    "bà đỏ": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/B%C3%A1nh_b%C3%A8o_ch%C3%A9n.jpg/960px-B%C3%A1nh_b%C3%A8o_ch%C3%A9n.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Banh_beo_Thien_Mu.jpg/960px-Banh_beo_Thien_Mu.jpg"
+    ],
+    "nem lụi": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%281%29.jpg/960px-Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%281%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%282%29.jpg/960px-Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%282%29.jpg"
+    ],
+    "quán hạnh": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/B%C3%A1nh_x%C3%A8o_1.jpg/960px-B%C3%A1nh_x%C3%A8o_1.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%281%29.jpg/960px-Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%281%29.jpg"
+    ],
+    "tài phú": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%281%29.jpg/960px-Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%281%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%283%29.jpg/960px-Nh%C3%A0_m%C3%ACnh_L%E1%BB%85_30th4n2023_%28ch%E1%BA%A1o_nem_l%E1%BB%A5i%29_%283%29.jpg"
+    ],
+    "cà phê muối": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/C%C3%A0_Ph%C3%AA_Mu%E1%BB%91i_-_The_Big_Bowl_2024-07-08.jpg/960px-C%C3%A0_Ph%C3%AA_Mu%E1%BB%91i_-_The_Big_Bowl_2024-07-08.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Ly_c%C3%A0_ph%C3%AA_mu%E1%BB%91i_%E1%BB%9F_T%C3%A2n_Ph%C3%BA_ng21th5n2023_%281%29.jpg/960px-Ly_c%C3%A0_ph%C3%AA_mu%E1%BB%91i_%E1%BB%9F_T%C3%A2n_Ph%C3%BA_ng21th5n2023_%281%29.jpg"
+    ],
+    "chè": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Ch%C3%A8_b%C3%A0_ba.jpg/960px-Ch%C3%A8_b%C3%A0_ba.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/A_cup%2C_spoon_and_pot_of_Vietnamese_dessert-_banana%2C_tapioca_pudding.jpg/960px-A_cup%2C_spoon_and_pot_of_Vietnamese_dessert-_banana%2C_tapioca_pudding.jpg"
+    ],
+    "đèo hải vân": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Hai_Van_Pass%2C_Vietnam.jpg/960px-Hai_Van_Pass%2C_Vietnam.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Hai_Van_Pass_under_fog%2C_Vietnam.jpg/960px-Hai_Van_Pass_under_fog%2C_Vietnam.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Hai_Van_Pass%2C_Vietnam%2C_View_southwards.jpg/960px-Hai_Van_Pass%2C_Vietnam%2C_View_southwards.jpg"
+    ],
+    "hải vân quan": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Hai_Van_Pass%2C_Vietnam%2C_US_military_bunker.jpg/960px-Hai_Van_Pass%2C_Vietnam%2C_US_military_bunker.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Hai_Van_Pass%2C_Vietnam.jpg/960px-Hai_Van_Pass%2C_Vietnam.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Hai_Van_Pass_under_fog%2C_Vietnam.jpg/960px-Hai_Van_Pass_under_fog%2C_Vietnam.jpg"
+    ],
+    "lập an": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Lang_Co_lagoon%2C_Lap_An_lagoon%2C_Vietnam.jpg/960px-Lang_Co_lagoon%2C_Lap_An_lagoon%2C_Vietnam.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Lagoon_L%E1%BA%ADp_An_L%C4%83ng_C%C3%B4_%282024%29_-_img_02.jpg/960px-Lagoon_L%E1%BA%ADp_An_L%C4%83ng_C%C3%B4_%282024%29_-_img_02.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Lap_An_lagoon_%2842920751850%29.jpg/960px-Lap_An_lagoon_%2842920751850%29.jpg"
+    ],
+    "lăng cô": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Lang_Co_lake%2C_Lap_An_lagoon%2C_Vietnam.jpg/960px-Lang_Co_lake%2C_Lap_An_lagoon%2C_Vietnam.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Lang_Co_lagoon%2C_Lap_An_lagoon%2C_Vietnam.jpg/960px-Lang_Co_lagoon%2C_Lap_An_lagoon%2C_Vietnam.jpg"
+    ],
+    "linh ứng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Son-Tra-Peninsula_Da-Nang_Vietnam_Linh-Ung-Pagoda-01.jpg/960px-Son-Tra-Peninsula_Da-Nang_Vietnam_Linh-Ung-Pagoda-01.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Son-Tra-Peninsula_Da-Nang_Vietnam_Linh-Ung-Pagoda-02.jpg/960px-Son-Tra-Peninsula_Da-Nang_Vietnam_Linh-Ung-Pagoda-02.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Lady_Buddha_Da_Nang.jpg/960px-Lady_Buddha_Da_Nang.jpg"
+    ],
+    "bàn cờ": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/To%C3%A0n_c%E1%BA%A3nh_%C4%90%C3%A0_N%E1%BA%B5ng_t%E1%BB%AB_%C4%91%E1%BB%89nh_b%C3%A0n_c%E1%BB%9D_b%C3%A1n_%C4%91%E1%BA%A3o_S%C6%A1n_Tr%C3%A0.png/960px-To%C3%A0n_c%E1%BA%A3nh_%C4%90%C3%A0_N%E1%BA%B5ng_t%E1%BB%AB_%C4%91%E1%BB%89nh_b%C3%A0n_c%E1%BB%9D_b%C3%A1n_%C4%91%E1%BA%A3o_S%C6%A1n_Tr%C3%A0.png",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Son-Tra-Peninsula_Da-Nang_Vietnam_Linh-Ung-Pagoda-02.jpg/960px-Son-Tra-Peninsula_Da-Nang_Vietnam_Linh-Ung-Pagoda-02.jpg"
+    ],
+    "mỹ khê": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/My_Khe_Beach_Danang_Coastline.jpg/960px-My_Khe_Beach_Danang_Coastline.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/My_Khe_Beach%2C_Da_Nang%2C_Vietnam.jpg/960px-My_Khe_Beach%2C_Da_Nang%2C_Vietnam.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/My_Khe_Beach_Da_Nang.jpg/960px-My_Khe_Beach_Da_Nang.jpg"
+    ],
+    "cầu rồng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Da_Nang_Dragon_Bridge_2020_IMG_3909.jpg/960px-Da_Nang_Dragon_Bridge_2020_IMG_3909.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Da_Nang_Dragon_Bridge.jpg/960px-Da_Nang_Dragon_Bridge.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Da_Nang_-_Dragon_Bridge.jpg/960px-Da_Nang_-_Dragon_Bridge.jpg"
+    ],
+    "cầu tình yêu": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Love_Lock_Bridge_Da_Nang_05.19.jpg/960px-Love_Lock_Bridge_Da_Nang_05.19.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Dragon_Carp%2C_Da_Nang_05.19.jpg/960px-Dragon_Carp%2C_Da_Nang_05.19.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Han_River_in_Da_Nang_1.jpg/960px-Han_River_in_Da_Nang_1.jpg"
+    ],
+    "hải sản": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Live_seafood_tanks_in_Danang.jpg/960px-Live_seafood_tanks_in_Danang.jpg"
+    ],
+    "bánh tráng cuốn": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/B%C3%A1nh_tr%C3%A1ng_cu%E1%BB%91n_th%E1%BB%8Bt_heo_%2818521%29.jpg/960px-B%C3%A1nh_tr%C3%A1ng_cu%E1%BB%91n_th%E1%BB%8Bt_heo_%2818521%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/B%C3%A1nh_tr%C3%A1ng_cu%E1%BB%91n_th%E1%BB%8Bt_heo.jpg/960px-B%C3%A1nh_tr%C3%A1ng_cu%E1%BB%91n_th%E1%BB%8Bt_heo.jpg"
+    ],
+    "kem bơ": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Han_River_in_Da_Nang_1.jpg/960px-Han_River_in_Da_Nang_1.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Love_Lock_Bridge_Da_Nang_05.19.jpg/960px-Love_Lock_Bridge_Da_Nang_05.19.jpg"
+    ],
+    "ngũ hành sơn": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Da_Nang_Marble_Mountains_2020_IMG_4008.jpg/960px-Da_Nang_Marble_Mountains_2020_IMG_4008.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Marble_Mountain_Hoi_An%2C_Da_Nang_%2871468%29.jpg/960px-Marble_Mountain_Hoi_An%2C_Da_Nang_%2871468%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Hiking_at_Marble_Mountains%2C_Da_Nang%2C_Vietnam.jpg/960px-Hiking_at_Marble_Mountains%2C_Da_Nang%2C_Vietnam.jpg"
+    ],
+    "bà nà": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Ba_Na_Hills_French_Village.jpg/960px-Ba_Na_Hills_French_Village.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Ba_Na_Hills_in_the_mist.jpg/960px-Ba_Na_Hills_in_the_mist.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Cable_Car_at_Sun_World_Ba_Na_Hills_in_the_sunset.jpg/960px-Cable_Car_at_Sun_World_Ba_Na_Hills_in_the_sunset.jpg"
+    ],
+    "mì quảng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/M%C3%AC_Qu%E1%BA%A3ng%2C_Da_Nang%2C_Vietnam.jpg/960px-M%C3%AC_Qu%E1%BA%A3ng%2C_Da_Nang%2C_Vietnam.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mi_Quang_1A_Danang.jpg/960px-Mi_Quang_1A_Danang.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Mi_Quang_at_Ngoc_Mai_%28with_noodles_uncovered%29.jpg/960px-Mi_Quang_at_Ngoc_Mai_%28with_noodles_uncovered%29.jpg"
+    ],
+    "bếp trang": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/M%C3%AC_Qu%E1%BA%A3ng%2C_Da_Nang%2C_Vietnam.jpg/960px-M%C3%AC_Qu%E1%BA%A3ng%2C_Da_Nang%2C_Vietnam.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mi_Quang_1A_Danang.jpg/960px-Mi_Quang_1A_Danang.jpg"
+    ],
+    "bảy mẫu": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Basket_Boat_and_the_Bamboo_forest_%28Unsplash%29.jpg/960px-Basket_Boat_and_the_Bamboo_forest_%28Unsplash%29.jpg"
+    ],
+    "chùa cầu": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-02.jpg/960px-H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-02.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-01.jpg/960px-H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-01.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-03.jpg/960px-H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-03.jpg"
+    ],
+    "trà mót": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-10.jpg/960px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-10.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Lanterns_in_Hoi_An_3.jpg/960px-Lanterns_in_Hoi_An_3.jpg"
+    ],
+    "bánh mì phượng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/B%C3%A1nh_M%C3%AC_Ph%C6%B0%E1%BB%A3ng_%282024%29_-_img_01.jpg/960px-B%C3%A1nh_M%C3%AC_Ph%C6%B0%E1%BB%A3ng_%282024%29_-_img_01.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/B%C3%A1nh_M%C3%AC_Ph%C6%B0%E1%BB%A3ng_%282024%29_-_img_02.jpg/960px-B%C3%A1nh_M%C3%AC_Ph%C6%B0%E1%BB%A3ng_%282024%29_-_img_02.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Banh_My_Phuong_Hoi_An_quay_banh.jpg/960px-Banh_My_Phuong_Hoi_An_quay_banh.jpg"
+    ],
+    "cao lầu": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Cao_l%E1%BA%A7u_H%E1%BB%99i_An_%282024%29.jpg/960px-Cao_l%E1%BA%A7u_H%E1%BB%99i_An_%282024%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Cao_Lau_Hoi_An.JPG/960px-Cao_Lau_Hoi_An.JPG"
+    ],
+    "cơm gà": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-05.jpg/960px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-05.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg/960px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-06.jpg"
+    ],
+    "phố cổ hội an": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-10.jpg/960px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-10.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-11.jpg/960px-H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-11.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Lanterns_in_Hoi_An_3.jpg/960px-Lanterns_in_Hoi_An_3.jpg"
+    ],
+    "sông hoài": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Lanterns_in_Hoi_An_2.jpg/960px-Lanterns_in_Hoi_An_2.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Lanterns_in_Hoi_An_5.jpg/960px-Lanterns_in_Hoi_An_5.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Lanterns_in_Hoi_An_6.jpg/960px-Lanterns_in_Hoi_An_6.jpg"
+    ],
+    "bông hồng trắng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/B%C3%A1nh_bao_b%C3%A1nh_v%E1%BA%A1c_-_hoi_an_%282024%29.jpg/960px-B%C3%A1nh_bao_b%C3%A1nh_v%E1%BA%A1c_-_hoi_an_%282024%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f5/White_Rose_Hoi_An.JPG"
+    ],
+    "bánh xèo": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/B%C3%A1nh_x%C3%A8o_1.jpg/960px-B%C3%A1nh_x%C3%A8o_1.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/B%C3%A1nh_x%C3%A8o_with_pork_sausage_and_shrimp_served_with_various_garnishes.jpg/960px-B%C3%A1nh_x%C3%A8o_with_pork_sausage_and_shrimp_served_with_various_garnishes.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/B%C3%A1nh_x%C3%A8o_with_n%C6%B0%E1%BB%9Bc_m%E1%BA%AFm.jpg/960px-B%C3%A1nh_x%C3%A8o_with_n%C6%B0%E1%BB%9Bc_m%E1%BA%AFm.jpg"
+    ],
+    "bún mắm": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/B%C3%A1nh_x%C3%A8o_1.jpg/960px-B%C3%A1nh_x%C3%A8o_1.jpg"
+    ],
+    "chợ hàn": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Han_Market_Da_Nang.JPG/960px-Han_Market_Da_Nang.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Han_Market_-_Da_Nang%2C_Vietnam_-_DSC02375.JPG/960px-Han_Market_-_Da_Nang%2C_Vietnam_-_DSC02375.JPG"
+    ],
+    "chợ cồn": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Con_Market_at_sunset.jpg/960px-Con_Market_at_sunset.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Con_Market_across_intersection.JPG/960px-Con_Market_across_intersection.JPG",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Con_Market_2.jpg/960px-Con_Market_2.jpg"
+    ],
+    "bạch đằng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Han_River_in_Da_Nang_1.jpg/960px-Han_River_in_Da_Nang_1.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Standing_by_Han_River_Da_Nang.jpg/960px-Standing_by_Han_River_Da_Nang.jpg"
+    ],
+    "phú bài": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Phu_Bai_International_Airport.jpg/960px-Phu_Bai_International_Airport.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Phu_Bai_Airport.jpg/960px-Phu_Bai_Airport.jpg"
+    ],
+    "đà nẵng (dad)": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_06.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_06.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_09.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_09.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_02.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_02.jpg"
+    ],
+    "tân sơn nhất": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Tan_Son_Nhat_International_Airport_at_night_%2812088245464%29.jpg/960px-Tan_Son_Nhat_International_Airport_at_night_%2812088245464%29.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Tan_Son_Nhat_Terminal_3_Jan_25%2C_2025.jpg/960px-Tan_Son_Nhat_Terminal_3_Jan_25%2C_2025.jpg"
+    ],
+    "sân bay quốc tế đà nẵng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_06.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_06.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_09.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_09.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_02.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_02.jpg"
+    ],
+    "sân bay đà nẵng": [
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_06.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_06.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_09.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_09.jpg",
+        "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_02.jpg/960px-2024_Da_Nang_International_Airport_%28DAD%29_-_international_terminal_-_img_02.jpg"
+    ]
+};
+
+        function openPlaceModal(name, url) {
+            modalTitle.textContent = name;
+            modalMapLink.href = url;
+            modalGallery.innerHTML = '';
+
+            const lower = name.toLowerCase();
+            const key = Object.keys(PLACE_IMAGES)
+                .sort((a, b) => b.length - a.length)
+                .find(k => lower.includes(k));
+
+            if (!key) {
+                const note = document.createElement('p');
+                note.className = 'col-span-2 text-sm text-stone-500 py-6 text-center';
+                note.textContent = 'Chưa có ảnh công khai cho địa điểm này — xem ảnh thật trên Google Maps bên dưới.';
+                modalGallery.appendChild(note);
+            } else {
+                PLACE_IMAGES[key].slice(0, 3).forEach((imgUrl, index) => {
+                    const img = document.createElement('img');
+                    img.src = imgUrl;
+                    img.loading = 'lazy';
+                    img.className = `w-full object-cover rounded-[1rem] shadow-sm border border-stone-200/60 ${index === 0 ? 'col-span-2 h-48 sm:h-64' : 'col-span-1 h-28 sm:h-36'}`;
+                    img.alt = `Hình ảnh ${name}`;
+                    img.onerror = () => img.remove();
+                    modalGallery.appendChild(img);
+                });
+            }
+
+            placeModal.classList.remove('hidden');
+            placeModal.classList.add('flex');
+            void placeModal.offsetWidth;
+            placeModal.classList.remove('opacity-0');
+            placeModalContent.classList.remove('scale-95');
+            placeModalContent.classList.add('scale-100');
+        }
+
+        function closePlaceModal() {
+            placeModal.classList.add('opacity-0');
+            placeModalContent.classList.remove('scale-100');
+            placeModalContent.classList.add('scale-95');
+            setTimeout(() => {
+                placeModal.classList.add('hidden');
+                placeModal.classList.remove('flex');
+            }, 300);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href*="google.com/maps"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let placeName = this.innerText.trim();
+                    if (!placeName) {
+                        const span = this.querySelector('span');
+                        if (span) placeName = span.innerText.trim();
+                    }
+                    if (!placeName) placeName = "Địa điểm nổi bật";
+                    openPlaceModal(placeName, this.href);
+                });
+            });
+        });
+
+        function formatCurrencyVND(amount) {
+            return Math.round(amount).toLocaleString('vi-VN') + ' đ';
+        }
+
+        function filterDays(dayKey) {
+            const articles = document.querySelectorAll('#itinerary-container article[data-day]');
+            const buttons = document.querySelectorAll('#day-filter-controls .filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.dataset.filter === dayKey) {
+                    btn.classList.remove('bg-white', 'text-stone-700', 'border', 'border-stone-200');
+                    btn.classList.add('bg-stone-900', 'text-white', 'shadow-xs');
+                } else {
+                    btn.classList.add('bg-white', 'text-stone-700', 'border', 'border-stone-200');
+                    btn.classList.remove('bg-stone-900', 'text-white', 'shadow-xs');
+                }
+            });
+
+            articles.forEach(article => {
+                article.style.display = (dayKey === 'all' || article.dataset.day === dayKey) ? 'block' : 'none';
+            });
+        }
+
+        function onFlightRange() {
+            const val = document.getElementById('range-flight').value;
+            document.getElementById('input-flight').value = val;
+            recalculateBudget();
+        }
+
+        function onFlightInput() {
+            const val = Number(document.getElementById('input-flight').value) || 0;
+            const slider = document.getElementById('range-flight');
+            if (val >= Number(slider.min) && val <= Number(slider.max)) {
+                slider.value = val;
+            }
+            recalculateBudget();
+        }
+
+        function adjustPeople(delta) {
+            const input = document.getElementById('input-people');
+            let count = Number(input.value) || 3;
+            count = Math.max(1, Math.min(20, count + delta));
+            input.value = count;
+            recalculateBudget();
+        }
+
+        function recalculateBudget() {
+            const COST_HUE_HOTEL = 1498500;
+            const COST_DN_HOTEL = 1007202;
+            const COST_VF3_CAR = 1400000;
+
+            const flight = Math.max(0, Number(document.getElementById('input-flight').value) || 0);
+            const people = Math.max(1, Number(document.getElementById('input-people').value) || 3);
+
+            const fixedTotal = flight + COST_HUE_HOTEL + COST_DN_HOTEL + COST_VF3_CAR;
+            const fixedPerPerson = fixedTotal / people;
+
+            document.getElementById('badge-people-count').textContent = `Chia đều ${people} người`;
+            document.getElementById('out-fixed-total').textContent = formatCurrencyVND(fixedTotal);
+            document.getElementById('out-fixed-pp').textContent = formatCurrencyVND(fixedPerPerson);
+
+            const quickMillion = (fixedPerPerson / 1000000).toFixed(2).replace('.', ',');
+            document.getElementById('nav-quick-cost').textContent = `~${quickMillion}tr/người`;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            recalculateBudget();
+        });
+    </script>
+</body>
+</html>
