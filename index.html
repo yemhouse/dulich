@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Leaflet (bản đồ OpenStreetMap) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -89,6 +93,9 @@
                     </a>
                     <a href="#itinerary" class="shrink-0 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-stone-700 hover:bg-amber-100/70 hover:text-amber-900 transition-colors">
                         Lịch trình 4 ngày
+                    </a>
+                    <a href="#map" class="shrink-0 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-stone-700 hover:bg-amber-100/70 hover:text-amber-900 transition-colors">
+                        Bản đồ
                     </a>
                     <a href="#budget" class="shrink-0 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-stone-700 hover:bg-amber-100/70 hover:text-amber-900 transition-colors">
                         Bảng Chi Phí
@@ -760,6 +767,33 @@
             </div>
         </section>
 
+        <!-- PHẦN 2.5: BẢN ĐỒ -->
+        <section id="map" class="scroll-mt-24 mb-14">
+            <div class="mb-5">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mb-2">Bản Đồ Địa Điểm</h2>
+                <p class="text-sm text-stone-600">Bấm vào ghim để xem chi tiết và mở chỉ đường Google Maps. Vị trí trên bản đồ là tương đối, hãy dùng nút "Chỉ đường" để lấy địa chỉ chính xác.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 mb-3" id="map-filters">
+                <button data-day="all" class="map-filter active px-3.5 py-2 rounded-xl text-xs font-bold bg-stone-900 text-white transition-colors">Tất cả</button>
+                <button data-day="1" class="map-filter px-3.5 py-2 rounded-xl text-xs font-bold bg-stone-100 text-stone-800 hover:bg-stone-200 transition-colors">Ngày 1</button>
+                <button data-day="2" class="map-filter px-3.5 py-2 rounded-xl text-xs font-bold bg-stone-100 text-stone-800 hover:bg-stone-200 transition-colors">Ngày 2</button>
+                <button data-day="3" class="map-filter px-3.5 py-2 rounded-xl text-xs font-bold bg-stone-100 text-stone-800 hover:bg-stone-200 transition-colors">Ngày 3</button>
+                <button data-day="4" class="map-filter px-3.5 py-2 rounded-xl text-xs font-bold bg-stone-100 text-stone-800 hover:bg-stone-200 transition-colors">Ngày 4</button>
+                <span class="mx-1 text-stone-300">|</span>
+                <label class="inline-flex items-center gap-1.5 text-xs font-semibold text-stone-700 cursor-pointer"><input type="checkbox" id="map-show-food" checked class="accent-amber-600"> Hiện quán ăn</label>
+            </div>
+            <div class="rounded-3xl overflow-hidden border border-stone-200/90 shadow-xs relative" style="z-index:0">
+                <div id="trip-map" style="height:min(70vh,560px);width:100%"></div>
+            </div>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 mt-3 text-[11px] font-semibold text-stone-600">
+                <span><span class="inline-block w-2.5 h-2.5 rounded-full align-middle" style="background:#0d9488"></span> Ngày 1</span>
+                <span><span class="inline-block w-2.5 h-2.5 rounded-full align-middle" style="background:#d97706"></span> Ngày 2</span>
+                <span><span class="inline-block w-2.5 h-2.5 rounded-full align-middle" style="background:#dc2626"></span> Ngày 3</span>
+                <span><span class="inline-block w-2.5 h-2.5 rounded-full align-middle" style="background:#7c3aed"></span> Ngày 4</span>
+                <span>Ghim tròn = tham quan • ghim vuông = quán ăn</span>
+            </div>
+        </section>
+
         <!-- PHẦN 3: CHI PHÍ -->
         <section id="budget" class="scroll-mt-24 mb-10">
             <div class="max-w-3xl mb-10">
@@ -843,6 +877,101 @@
 
     <script>
         lucide.createIcons();
+
+        // ===== Bản đồ địa điểm =====
+        const DAY_COLORS = {1:'#0d9488', 2:'#d97706', 3:'#dc2626', 4:'#7c3aed'};
+        // [tên, vĩ độ, kinh độ, các ngày ghé, loại ('sight'|'food'), từ khóa Google Maps]
+        const TRIP_PLACES = [
+            ['Sân bay Đà Nẵng (DAD)', 16.0439, 108.1994, [1,4], 'sight', 'San bay quoc te Da Nang'],
+            ['Đèo Hải Vân – Hải Vân Quan', 16.2003, 108.1325, [2], 'sight', 'Hai Van Quan Deo Hai Van'],
+            ['Đầm Lập An', 16.3140, 108.0740, [2], 'sight', 'Dam Lap An Lang Co Hue'],
+            ['Hầm Hải Vân', 16.2200, 108.1250, [4], 'sight', 'Ham Hai Van'],
+            ['Đại Nội Huế', 16.4698, 107.5780, [2], 'sight', 'Dai Noi Hue'],
+            ['Chùa Thiên Mụ', 16.4536, 107.5446, [2], 'sight', 'Chua Thien Mu Hue'],
+            ['Cung An Định', 16.4546, 107.6004, [2], 'sight', 'Cung An Dinh Hue'],
+            ['Cầu Trường Tiền & sông Hương', 16.4682, 107.5870, [2,3], 'sight', 'Cau Truong Tien Hue'],
+            ['Phố đi bộ Nguyễn Đình Chiểu', 16.4688, 107.5930, [2,3], 'sight', 'Pho di bo Nguyen Dinh Chieu Hue'],
+            ['Chợ Đông Ba', 16.4745, 107.5865, [3], 'sight', 'Cho Dong Ba Hue'],
+            ['Lăng Khải Định', 16.4023, 107.5890, [3], 'sight', 'Lang Khai Dinh Hue'],
+            ['Lăng Minh Mạng', 16.3870, 107.5620, [3], 'sight', 'Lang Minh Mang Hue'],
+            ['Lăng Tự Đức', 16.4348, 107.5640, [4], 'sight', 'Lang Tu Duc Hue'],
+            ['Chùa Từ Hiếu', 16.4283, 107.5543, [4], 'sight', 'Chua Tu Hieu Hue'],
+            ['Đàn Nam Giao', 16.4492, 107.5848, [4], 'sight', 'Dan Nam Giao Hue'],
+            ['Hồ Thủy Tiên', 16.3915, 107.6010, [4], 'sight', 'Ho Thuy Tien Hue'],
+            ['Nhà vườn An Hiên', 16.4558, 107.5733, [3], 'sight', 'Nha vuon An Hien Hue'],
+            ['Bánh xèo Bà Dưỡng', 16.0600, 108.2189, [2,4], 'food', 'Banh xeo Ba Duong K280 Hoang Dieu Da Nang'],
+            ['Bún mắm Bà Thuyên', 16.0710, 108.2140, [2], 'food', 'Bun mam Ba Thuyen K424 Le Duan Da Nang'],
+            ['Mì Quảng Bà Mua', 16.0679, 108.2208, [4], 'food', 'Mi Quang Ba Mua Da Nang'],
+            ['Nhà hàng hải sản Bé Đen (Lăng Cô)', 16.2450, 108.0890, [2], 'food', 'Nha hang hai san Be Den Lang Co'],
+            ['Nem lụi Tài Phú 2', 16.4580, 107.5860, [2,3], 'food', 'Nem lui Tai Phu 2 Dien Bien Phu Hue'],
+            ['Quán Hạnh', 16.4660, 107.5940, [2,3], 'food', 'Quan Hanh 11 Pho Duc Chinh Hue'],
+            ['Chè hẻm 29 Hùng Vương', 16.4610, 107.5930, [2,3], 'food', 'Che Hem 29 Hung Vuong Hue'],
+            ['Bún bò Mệ Kéo', 16.4710, 107.5980, [3], 'food', 'Bun bo Me Keo 20 Bach Dang Hue'],
+            ['Cơm hến Hoà Đông', 16.4682, 107.5897, [3], 'food', 'Com hen Hoa Dong 64 Ung Binh Con Hen Hue'],
+            ['Bánh canh Nam Phổ', 16.4640, 107.5920, [3], 'food', 'Banh canh Nam Pho Thuy 16 Pham Hong Thai Hue'],
+            ['Cà phê Muối', 16.4690, 107.5820, [3], 'food', 'Ca phe Muoi 142 Dang Thai Than Hue'],
+            ['Bánh khoái Lạc Thiện', 16.4700, 107.5810, [4], 'food', 'Banh khoai Lac Thien Hue'],
+        ];
+
+        (function initTripMap() {
+            const mapEl = document.getElementById('trip-map');
+            if (!mapEl || typeof L === 'undefined') return;
+            const map = L.map(mapEl, { scrollWheelZoom: false }).setView([16.3, 107.85], 9);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            const layer = L.layerGroup().addTo(map);
+            let currentDay = 'all';
+            const dayLabel = ds => ds.map(d => 'Ngày ' + d).join(', ');
+
+            function makeIcon(day, kind) {
+                const radius = kind === 'food' ? '4px' : '50%';
+                return L.divIcon({
+                    className: '',
+                    html: '<div style="width:22px;height:22px;border-radius:' + radius + ';background:' + DAY_COLORS[day] +
+                          ';border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45);color:#fff;font:700 11px/18px sans-serif;text-align:center">' + day + '</div>',
+                    iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -11]
+                });
+            }
+
+            function render() {
+                layer.clearLayers();
+                const showFood = document.getElementById('map-show-food').checked;
+                const pts = [];
+                TRIP_PLACES.forEach(([name, lat, lng, days, kind, q]) => {
+                    if (kind === 'food' && !showFood) return;
+                    if (currentDay !== 'all' && !days.includes(Number(currentDay))) return;
+                    const day = currentDay === 'all' ? days[0] : Number(currentDay);
+                    const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+                    const m = L.marker([lat, lng], { icon: makeIcon(day, kind), title: name });
+                    m.bindPopup('<div style="font-family:inherit"><strong>' + name + '</strong><br><span style="font-size:12px;color:#57534e">' +
+                        (kind === 'food' ? 'Quán ăn' : 'Tham quan') + ' • ' + dayLabel(days) + '</span><br>' +
+                        '<a href="' + url + '" target="_blank" rel="noopener noreferrer" style="font-weight:700;color:#b45309">Chỉ đường Google Maps →</a></div>');
+                    m.addTo(layer);
+                    pts.push([lat, lng]);
+                });
+                if (pts.length) map.fitBounds(pts, { padding: [30, 30], maxZoom: 14 });
+            }
+
+            document.querySelectorAll('.map-filter').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentDay = btn.dataset.day;
+                    document.querySelectorAll('.map-filter').forEach(b => {
+                        const on = b === btn;
+                        b.classList.toggle('bg-stone-900', on);
+                        b.classList.toggle('text-white', on);
+                        b.classList.toggle('bg-stone-100', !on);
+                        b.classList.toggle('text-stone-800', !on);
+                    });
+                    render();
+                });
+            });
+            document.getElementById('map-show-food').addEventListener('change', render);
+            map.once('focus', () => map.scrollWheelZoom.enable());
+            render();
+        })();
 
         const placeModal = document.getElementById('place-modal');
         const placeModalContent = document.getElementById('place-modal-content');
