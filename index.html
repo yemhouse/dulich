@@ -917,9 +917,10 @@
             const mapEl = document.getElementById('trip-map');
             if (!mapEl || typeof L === 'undefined') return;
             const map = L.map(mapEl, { scrollWheelZoom: false }).setView([16.3, 107.85], 9);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
                 maxZoom: 19,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                subdomains: 'abcd',
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(map);
 
             const layer = L.layerGroup().addTo(map);
