@@ -894,7 +894,7 @@
                 </div>
                 <div class="p-6">
                     <p class="text-sm font-semibold text-stone-500 mb-4 flex items-center gap-1.5">
-                        <i data-lucide="image" class="w-4 h-4"></i> Hình ảnh tham khảo (Wikimedia Commons)
+                        <i data-lucide="image" class="w-4 h-4"></i> Ảnh từ Google Maps &amp; Wikimedia Commons
                     </p>
                     <div class="grid grid-cols-2 gap-3" id="modal-gallery"></div>
                 </div>
@@ -926,43 +926,43 @@
         const DAY_COLORS = {1:'#0d9488', 2:'#d97706', 3:'#dc2626', 4:'#7c3aed'};
         // [tên, vĩ độ, kinh độ, các ngày ghé, loại ('sight'|'food'), từ khóa Google Maps]
         const TRIP_PLACES = [
-            ['Sân bay Đà Nẵng (DAD)', 16.0439, 108.1994, [1,4], 'sight', 'San bay quoc te Da Nang'],
-            ['Đèo Hải Vân – Hải Vân Quan', 16.2003, 108.1325, [2], 'sight', 'Hai Van Quan Deo Hai Van'],
-            ['Đầm Lập An', 16.3140, 108.0740, [2], 'sight', 'Dam Lap An Lang Co Hue'],
-            ['Hầm Hải Vân', 16.2200, 108.1250, [4], 'sight', 'Ham Hai Van'],
-            ['Bánh xèo Bà Dưỡng', 16.0600, 108.2189, [2,4], 'food', 'Banh xeo Ba Duong K280 Hoang Dieu Da Nang'],
-            ['Bún mắm Bà Thuyên', 16.0710, 108.2140, [2], 'food', 'Bun mam Ba Thuyen K424 Le Duan Da Nang'],
-            ['Mì Quảng Bà Mua', 16.0679, 108.2208, [4], 'food', 'Mi Quang Ba Mua Da Nang'],
+            ['Sân bay Đà Nẵng (DAD)', 16.0570, 108.2025, [1,4], 'sight', 'San bay quoc te Da Nang'],
+            ['Đèo Hải Vân – Hải Vân Quan', 16.1877, 108.1313, [2], 'sight', 'Hai Van Quan Deo Hai Van'],
+            ['Đầm Lập An', 16.2214, 108.0616, [2], 'sight', 'Dam Lap An Lang Co Hue'],
+            ['Hầm Hải Vân', 16.1901, 108.0997, [4], 'sight', 'Ham Hai Van'],
+            ['Bánh xèo Bà Dưỡng', 16.0589, 108.2162, [2,4], 'food', 'Banh xeo Ba Duong K280 Hoang Dieu Da Nang'],
+            ['Bún mắm Bà Thuyên', 16.0676, 108.2077, [2], 'food', 'Bun mam Ba Thuyen K424 Le Duan Da Nang'],
+            ['Mì Quảng Bà Mua', 16.0613, 108.2213, [4], 'food', 'Mi Quang Ba Mua Da Nang'],
             ['Nhà hàng hải sản Bé Đen (Lăng Cô)', 16.2450, 108.0890, [2], 'food', 'Nha hang hai san Be Den Lang Co'],
-            ['Đại Nội Huế', 16.4698, 107.5780, [3], 'sight', 'Dai Noi Hue'],
-            ['Chùa Thiên Mụ', 16.4536, 107.5446, [2], 'sight', 'Chua Thien Mu Hue'],
-            ['Cung An Định', 16.4546, 107.6004, [4], 'sight', 'Cung An Dinh Hue'],
-            ['Cầu Trường Tiền & sông Hương', 16.4682, 107.5870, [2, 4], 'sight', 'Cau Truong Tien Hue'],
-            ['Phố đi bộ Nguyễn Đình Chiểu', 16.4688, 107.5930, [2], 'sight', 'Pho di bo Nguyen Dinh Chieu Hue'],
-            ['Chợ Đông Ba', 16.4745, 107.5865, [4], 'sight', 'Cho Dong Ba Hue'],
-            ['Lăng Khải Định', 16.4023, 107.5890, [3], 'sight', 'Lang Khai Dinh Hue'],
-            ['Lăng Minh Mạng', 16.3870, 107.5620, [3], 'sight', 'Lang Minh Mang Hue'],
-            ['Bánh ướt thịt nướng Huyền Anh', 16.4590, 107.5560, [2], 'food', 'Banh uot thit nuong Huyen Anh Kim Long Hue'],
-            ['Bánh cuốn tôm chua Mệ Hạnh', 16.4600, 107.5960, [2], 'food', 'Banh uot tom chua Me Hanh Phan Dinh Phung cau Kho Ren Hue'],
-            ['Bánh canh Nam Phổ Thúy', 16.4640, 107.5920, [2], 'food', 'Banh canh Nam Pho Thuy 16 Pham Hong Thai Hue'],
-            ['Chè Mợ Tôn Đích', 16.4740, 107.5850, [2], 'food', 'Che Mo Ton Dich 20 Dinh Tien Hoang Hue'],
-            ['Bánh mì O Tho', 16.4660, 107.5895, [2], 'food', 'Banh mi O Tho 8 Hoang Hoa Tham Hue'],
-            ['Bún bò Mệ Kéo', 16.4710, 107.5980, [3], 'food', 'Bun bo Me Keo 20 Bach Dang Hue'],
-            ['Cà phê Muối', 16.4690, 107.5820, [3], 'food', 'Ca phe Muoi 42 Dang Thai Than Hue'],
-            ['Vịt Thuận', 16.4600, 107.5700, [3], 'food', 'Vit Thuan 94 Bui Thi Xuan Hue'],
-            ['Bánh ép Cây Xoài', 16.5560, 107.6400, [3], 'food', 'Banh ep Cay Xoai Thuan An Hue'],
-            ['Bún bò đêm bà Nga', 16.4720, 107.5800, [3], 'food', 'Bun bo dem ba Nga 62 Nguyen Chi Dieu Hue'],
-            ['Bún hến Cồn Hến', 16.4775, 107.5935, [4], 'food', 'Bun hen Con Hen Hue'],
-            ['Bánh bèo Bà Cư', 16.4550, 107.6000, [4], 'food', 'Banh beo Ba Cu 177 Phan Dinh Phung Hue'],
-            ['Bánh canh cua rời bà Nga', 16.4645, 107.5925, [4], 'food', 'Banh canh cua roi ba Nga 32 Pham Hong Thai Hue'],
-            ['Nem lụi Bà Ty', 16.4760, 107.5830, [4], 'food', 'Nem lui Ba Ty 81 Dao Duy Tu Hue'],
-            ['Văn Thánh', 16.4520, 107.5310, [2], 'sight', 'Van Thanh Hue Van Mieu'],
-            ['Chùa Huyền Không', 16.4573, 107.5194, [2], 'sight', 'Chua Huyen Khong Hue'],
-            ['Trường Quốc Học', 16.4628, 107.5935, [2], 'sight', 'Truong Quoc Hoc Hue'],
+            ['Đại Nội Huế', 16.4695, 107.5774, [3], 'sight', 'Dai Noi Hue'],
+            ['Chùa Thiên Mụ', 16.4532, 107.5448, [2], 'sight', 'Chua Thien Mu Hue'],
+            ['Cung An Định', 16.4567, 107.5983, [4], 'sight', 'Cung An Dinh Hue'],
+            ['Cầu Trường Tiền & sông Hương', 16.4691, 107.5886, [2, 4], 'sight', 'Cau Truong Tien Hue'],
+            ['Phố đi bộ Nguyễn Đình Chiểu', 16.4670, 107.5890, [2], 'sight', 'Pho di bo Nguyen Dinh Chieu Hue'],
+            ['Chợ Đông Ba', 16.4727, 107.5885, [4], 'sight', 'Cho Dong Ba Hue'],
+            ['Lăng Khải Định', 16.3989, 107.5903, [3], 'sight', 'Lang Khai Dinh Hue'],
+            ['Lăng Minh Mạng', 16.3875, 107.5703, [3], 'sight', 'Lang Minh Mang Hue'],
+            ['Bánh ướt thịt nướng Huyền Anh', 16.4588, 107.5632, [2], 'food', 'Banh uot thit nuong Huyen Anh Kim Long Hue'],
+            ['Bánh cuốn tôm chua Mệ Hạnh', 16.4568, 107.5926, [2], 'food', 'Banh uot tom chua Me Hanh Phan Dinh Phung cau Kho Ren Hue'],
+            ['Bánh canh Nam Phổ Thúy', 16.4651, 107.5892, [2], 'food', 'Banh canh Nam Pho Thuy 16 Pham Hong Thai Hue'],
+            ['Chè Mợ Tôn Đích', 16.4687, 107.5843, [2], 'food', 'Che Mo Ton Dich 20 Dinh Tien Hoang Hue'],
+            ['Bánh mì O Tho', 16.4654, 107.5916, [2], 'food', 'Banh mi O Tho 8 Hoang Hoa Tham Hue'],
+            ['Bún bò Mệ Kéo', 16.4750, 107.5887, [3], 'food', 'Bun bo Me Keo 20 Bach Dang Hue'],
+            ['Cà phê Muối', 16.4712, 107.5729, [3], 'food', 'Ca phe Muoi 42 Dang Thai Than Hue'],
+            ['Vịt Thuận', 16.4560, 107.5716, [3], 'food', 'Vit Thuan 94 Bui Thi Xuan Hue'],
+            ['Bánh ép Cây Xoài', 16.5539, 107.6532, [3], 'food', 'Banh ep Cay Xoai Thuan An Hue'],
+            ['Bún bò đêm bà Nga', 16.4746, 107.5828, [3], 'food', 'Bun bo dem ba Nga 62 Nguyen Chi Dieu Hue'],
+            ['Bún hến Cồn Hến', 16.4793, 107.5936, [4], 'food', 'Bun hen Con Hen Hue'],
+            ['Bánh bèo Bà Cư', 16.4570, 107.5975, [4], 'food', 'Banh beo Ba Cu 177 Phan Dinh Phung Hue'],
+            ['Bánh canh cua rời bà Nga', 16.4644, 107.5895, [4], 'food', 'Banh canh cua roi ba Nga 32 Pham Hong Thai Hue'],
+            ['Nem lụi Bà Ty', 16.4800, 107.5834, [4], 'food', 'Nem lui Ba Ty 81 Dao Duy Tu Hue'],
+            ['Văn Thánh', 16.4527, 107.5390, [2], 'sight', 'Van Thanh Hue Van Mieu'],
+            ['Chùa Huyền Không', 16.4512, 107.4941, [2], 'sight', 'Chua Huyen Khong Hue'],
+            ['Trường Quốc Học', 16.4600, 107.5834, [2], 'sight', 'Truong Quoc Hoc Hue'],
             ['Phá Tam Giang', 16.5650, 107.6150, [3], 'sight', 'Pha Tam Giang Thuan An'],
-            ['Biển Thuận An', 16.5600, 107.6440, [3], 'sight', 'Bien Thuan An Hue'],
-            ['Flower Beachstay & Coffee (Đà Nẵng)', 16.0510, 108.2430, [1], 'hotel', 'Flower Beachstay Coffee 72/27 Nguyen Van Thoai Da Nang'],
-            ['Magnolia Boutique Hotel Huế', 16.4615, 107.6070, [2,3,4], 'hotel', 'Magnolia Boutique Hotel Hue'],
+            ['Biển Thuận An', 16.5709, 107.6312, [3], 'sight', 'Bien Thuan An Hue'],
+            ['Flower Beachstay & Coffee (Đà Nẵng)', 16.0535, 108.2405, [1], 'hotel', 'Flower Beachstay Coffee 72/27 Nguyen Van Thoai Da Nang'],
+            ['Magnolia Boutique Hotel Huế', 16.4627, 107.6055, [2,3,4], 'hotel', 'Magnolia Boutique Hotel Hue'],
         ];
 
         (function initTripMap() {
@@ -1007,9 +1007,15 @@
                     const day = currentDay === 'all' ? days[0] : Number(currentDay);
                     const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
                     const m = L.marker([lat, lng], { icon: makeIcon(day, kind), title: name });
-                    m.bindPopup('<div style="font-family:inherit"><strong>' + name + '</strong><br><span style="font-size:12px;color:#57534e">' +
+                    m.bindPopup(() => {
+                    const thumb = placeImagesFor(name)[0];
+                    return '<div style="font-family:inherit;width:220px">' +
+                        (thumb ? '<img src="' + thumb + '" alt="" loading="lazy" onerror="this.remove()" class="map-photo-open" data-name="' + name.replace(/"/g, '&quot;') + '" data-url="' + url + '" style="width:100%;height:120px;object-fit:cover;border-radius:10px;margin-bottom:6px;cursor:zoom-in">' : '') +
+                        '<strong>' + name + '</strong><br><span style="font-size:12px;color:#57534e">' +
                         (kind === 'food' ? 'Quán ăn' : kind === 'hotel' ? 'Khách sạn' : 'Tham quan') + ' • ' + dayLabel(days) + '</span><br>' +
-                        '<a href="' + url + '" target="_blank" rel="noopener noreferrer" style="font-weight:700;color:#b45309">Chỉ đường Google Maps →</a></div>');
+                        '<button type="button" class="map-photo-open" data-name="' + name.replace(/"/g, '&quot;') + '" data-url="' + url + '" style="font-weight:700;color:#0f766e;background:none;border:0;padding:0;cursor:pointer">📷 Xem ảnh</button> · ' +
+                        '<a href="' + url + '" target="_blank" rel="noopener noreferrer" data-no-modal style="font-weight:700;color:#b45309">Chỉ đường →</a></div>';
+                    }, { maxWidth: 240 });
                     m.addTo(layer);
                     pts.push([lat, lng]);
                 });
@@ -1040,7 +1046,7 @@
         const modalGallery = document.getElementById('modal-gallery');
         const modalMapLink = document.getElementById('modal-map-link');
 
-        // Ảnh theo từng địa điểm (nguồn: Wikimedia Commons)
+        // Ảnh dự phòng theo từng địa điểm (nguồn: Wikimedia Commons)
         const PLACE_IMAGES = {
     "thiên mụ": [
         "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-01.jpg/960px-Hue_Vietnam_Thien-Mu-Temple-and-Pagoda-01.jpg",
@@ -1275,30 +1281,255 @@
     ]
 };
 
+        // Ảnh thật từ Google Maps (lấy từ trang địa điểm), ưu tiên trước ảnh Wikimedia
+        const GMAP_PHOTOS = {
+        "sân bay đà nẵng": [
+                "grass-cs/AABkmLev2750Jp0nrY0d6TSAeENyTxqX-nG6wv-XQavnxM_oV7LldAUPOlxfoqTViK_k_fI_mD3ERyp9NSiYk9ynZhc7J1KY2w3DZzEjyTE3mBkdVO6c1aZOqN6vhhRMrf9Jhoi1Ru5_",
+                "gps-cs-s/ANWiy9SJQU80B9rtc49Xr7k0uLYEoS6iH8dowgRYvBq-gZVz0yrkwwbD6LFH4xL0egjFCJP83CEJF_qpvrtAdnfcC-gc5GNSSFezf6ulQAORzXajPjSd0yiMRoBIaGk1ye688eii8IQL2w",
+                "gps-cs-s/ANWiy9RYinsnRdJtbHZEsSp1LdXC2eZwRREKJv3x0q9ICx8rJMbHgH5NGVosYLQVuVvR_MS3-tqW-FMrZMAn7SVeBoNWhoQYZsdcIDCf0ViTIOxFfz8Hg7R7vLw0KZvJs4E1zfRC9rzH95yGmGm_"
+        ],
+        "hải vân quan": [
+                "grass-cs/AABkmLcUbSQ0mrqPX7sxaRRNM7W05vnS2b3gFY-9KhUxaiRullQ4CtgBQ4V3tPsry_F564Tn25sa2tOvtkuQVl1OHaRkvdivmKv9_J3zvsu9Ru5hhK_mqEnjJQ_CXj2egGJSGIcuER5t",
+                "gps-cs-s/ANWiy9R7QghNnGZpMHwVHzXbJlr9U0UulmuyQjkSxkJOTfrcxIjAbLCVVUROtkqk93pOmWYkC1rwistVkapLkRu-QTq3EeMXcDTjBcLeOLZUy71eigDCBKti-Pfy88ykjlwNt0XrKcp9QdcVSOjw",
+                "gps-cs-s/ANWiy9S-Df_Q1L8-lCPx8GVAd7Mi5hGYtHfxhfn11JRbgIKJlB8rICxnziQDgsyJCxepvOxOuRJbXQG9vK5T-sbz6AXUhRFQ0Q70wNCxwJAeUAIbpLssbdYiNqunEmSvnqT1S4SFCsHwopadWOWX"
+        ],
+        "lập an": [
+                "grass-cs/AABkmLd_vbnR9QlaWrDgPPjEMEYLKuMM2yV6wm2H3XwpOQYt5iy1co20vH9Q1Al1v0tgKD8OAFC38r7yVgqzOP0bapbm2gUrtWr8dsydlvHtXwoYLczJYgpECSSo8NtQSiz0uEPlTelQge77tpVC",
+                "gps-cs-s/ANWiy9TyEuIh6Tye7-O5iCUd4S8t6T7Bpn3hww8NyCER1ECp6Z07IVyybPxuFUUFDYuO_37lXbFWS5oBqE8_WKvQMhK_4VKEdzO0M6faL_BfbMPgGnTNhqkWwzmj6SqMJGiNZkqR7lvqiY-iE4VG",
+                "gps-cs-s/ANWiy9RgmiWLjDDT5dkvuIbC5V-J6RFiszHZL22zRKJ2p1HSWYLxLZsi-wc52HmEQZpoDD6u644p90sYDuy3LNlO2cosegENDxqaVpfJRslV_4xtyHljlrc1H6CkzAJwJecbDCI7mvnG-IzLqfss"
+        ],
+        "hầm hải vân": [
+                "grass-cs/AABkmLeGHUlHqHg567oBXhQ2JW35KdPHIUzngiKedbICb8VvJRq85CZhLahIuVOSl76417aCSZ9hhTsQaFFr6004rjQnS99CgzrY2woj__YR9jmXonnkVq0swEEjrijSZKJUuFyr3Xs",
+                "grass-cs/AABkmLdPnkTHb8spIea3OJcCFrehF4Lm6hHruyqSnrYKqXv_oj7ZR2EzAVjhqLo6-jtZgxdJOM9Kk2EduoVAOiNDyzrcZdiPPn0Q8ziT9lf1yU3wVNXSzl6eUigouGd2gXODb-j0SQyZlg"
+        ],
+        "bà dưỡng": [
+                "grass-cs/AABkmLcEb3fztmrsVs4YzhfWfFpq49MkDZRT5rxh8GT0wAEXrvqTN8DN3tp1sF0iLWwPtt5NqLDIfroH30olBzK_iS6q32eRIajswk5OhTwNw2qYLUiIsgpFoatp30kRifKoYvteFtfa",
+                "grass-cs/AABkmLeOe0Hvi0RCWvlWweJ2sdbU6jNuoe1Cie9IfWRKKnd6KEzia4h9cnTrgCqL2i1_WUyVU4f84TspN2B1cZUxTRz0yRzqpAsyc89vLMMuPTX8vuczODBBHF0_Vzy1weXbWxl4EIxaf0UoSUM",
+                "grass-cs/AABkmLfLabrPgPLAcT5nt7xJ9n58O5UJcO_vQePPNjscNu-BnsbM9NBY0QTv6AjuSPT6TEmNQMomHFeG7uAxeHxvJKq_VuB9pJmlquALuAcfQfA9qL3HswEL5o55OBsM8uNrR6PTFmdNaFgD12ll"
+        ],
+        "bà thuyên": [
+                "grass-cs/AABkmLe9yjUXk0CxdQ-cbFfC0d2GFWt3BtZED8VcTDi49Zxy0Kcp0G-G6eZi5f2DGmCehu8BoXX_J99R7Ov4pqcGH0D2MlO-llmT_r958Npi3mpgQY42NGOBCspuCHhANvL8-H14-T3h",
+                "grass-cs/AABkmLc4FrLqNwqFPHeOg2zqn8CtPNYwIR-mGJvOepCsheI7CwUHw2nBs61liFRWt8Xw5p0uiaAUNVJ9aWr-DirIp3g9vdpU7KcoDfF0o_q9PYsh8hUJ0Ky1XGuQ975dSNWrxUB48TOTdNr8FgPl",
+                "grass-cs/AABkmLcpyKGEOdMJ6bvZN74pwwhtk8THiI_LE3NsWfXxcEUhDGNIpuwWXKucWq0gQVmtAHruqJDpYy_oe41XlM0F66Qg3eteuxLmjOYixSuY-ooJgvnLHu5xHCubOmaTSGbz6DO-vE3g"
+        ],
+        "bà mua": [
+                "grass-cs/AABkmLe2t15zWNGtyhd7JGjtfAgX0XxkXxVc0SK2sSEkg4CvjXYHdmYxi7xY67XDR2-glIea4lyUg25Fci0k7nZwyumjI6sVL6hv7QvrHmHc0KgdJEKtDy5WN1I4jnqVn99It_RJpwk",
+                "grass-cs/AABkmLdVUqrK2Fibx9QbEVP7Nel6LkVQLxqQJz3UEXvEAro22UOr43be-ooak7QFTZuuFExFFUDttvirq_J4_RqJs3SWcd2y7qgBf_y3EOKdQF38lsMmyiLiYOTjKOcXzGUZqW7CMDD1DZMg8C8",
+                "grass-cs/AABkmLdvia8nt55IrCuc-RltZFMneLCngOCaqN3Lasc0J6jW61kDcCOR9quSWJqZz0ej2zVkZTFI1Pok50Qz6zgg4ntgPzOvaWiny64rQ2y2lWuZAiosYVaY5Iw0cKVwTpwvSpXlers"
+        ],
+        "đại nội": [
+                "grass-cs/AABkmLcqsO9KdHWCi52FyPLhPObqq213D3_oakrJEe0-o5MkbM7WrCxeNTD2ha_2gcQHeU7KUDkCyCr8zezesY85nb32AufNSAIFSh3SzqnVbgqYu-O8nfthcoJVfeZHW9KAZ27Lk_tuBRe_foUG",
+                "gps-cs-s/ANWiy9RyCNFmdKx-HVHN6NIMvqSp9AYJ4jXfiX09IUn19zV2jmNFeNH8WxSMVlYNfrp8phCdfAIROqK_PBONUlEyLVCB_UHuxdO8KKoAvWwCLLIScIeAQ1_25D0CRDvQgYhaGOErM85ViesCEfwg",
+                "gps-cs-s/ANWiy9TMqk_8yxOlDJRDq6S7DdNVZY0Va5bqjC3TaGm-B1mxJ66O-SaXvn3E599d5Kune7uB3WFtXY-H87-1jjsqOSS5P_TvyUJZ0872opc3KFQCONIrt_aoh6hSQSvYmqNwQwrE-YJmvqn9SZ34"
+        ],
+        "thiên mụ": [
+                "grass-cs/AABkmLfnYBCu7XV8R3-Mxh6v-p4RP4_oo_mhgbikNxAssmnoj7QNVYaT9aYNozEYSKKqyJI0tDsFXAs8xqyNK7lSbuxSHpedIfKBRRxAqf6BkrFgYTLz394LmPz2aaLohpBAmVUEjMFA",
+                "gps-cs-s/ANWiy9RZ61-9mhNTmDWdfEpxfy5Mt-mMcxrA3JKFHu7K-0ZGgKrdLa7M0x_TyjVB-iWTGuYHwFZSJTh3U2UO1-XJSXJ3dpV2FfJDplto-GCURu_fNVHyCK20eXb-hwMqVNkWgNm0-zog",
+                "gps-cs-s/ANWiy9ROHW1RRMrpP7NpD-EVbnm7UIA4BGn-fCIlIQM6InoF_4S6PGMQadl1ASTr6Sk6VveLPB54dZT1jew6-q1Z9lAyWluAmm9i6O8jaxDrXAM8yRjg_JKdehv0Yz0JM853nHRhGDlnskPTmX1H"
+        ],
+        "cung an định": [
+                "grass-cs/AABkmLcRqyunTxH7Uji48MUDT169IOFUaY-tV0rgE3VBRTww8uLcG66iujmhSBMZ05eIgfZd2Vvaq3HOc4xitspKgj1P5PoPaFMWnMHoNlb8EwoPV1I8oMw4OhxifGhXuxFYbwt0F_gCxApTavs0",
+                "gps-cs-s/ANWiy9TxROMD2gDDioOmFeJC8W_9UJqWOBKtbJ590zBXAmDGr3SsFy6zuHsLb4p2Hvx_LqL-ZU1JaQz0cP7TIv3kkt_t-JziTn385FhDsBuYO1IZy4viu0306kJnwR7ZsUTP5h0wNl842ipOgr3i",
+                "gps-cs-s/ANWiy9TyVsmqgZoustQk9lijN6jW1mFCF99klAQ-WasQx7Xz6VIq0MfiPcRfVmqzIqqJZ__OAWWr_3yEt1MZMaFR3J7J3H8dgOkluFv4g2OVAU0pRBKKH5WER80oj4294loEXY_Sp44wHEH0WOCq"
+        ],
+        "trường tiền": [
+                "grass-cs/AABkmLedS1y_op9HDq7w48bq96jWK2T6mneat-8av9xJK-YmtUJD6o79QT9wdB7ZdGh0tjmxUTnb6KeCON5WpuMX2sB14RtYS_HpxZc88Dvn8lO5i1kLYQRozHDeCPleFxocmDna27Efnw",
+                "gps-cs-s/ANWiy9Rwi0KC-1TowaqSelvs0djfiKkrk32DgMMJX_GXa7cIWW945OmpiABkgnuu36OOXpjpMMfdAe-zJ7Y5H1eBQ6Ifz_p_SfovMzF5FLHOqCU0Nrr96UsVLnAmE7WdDy-VbpO5ov9RGg",
+                "gps-cs-s/ANWiy9SpIkpd34J1TtTxuczdCD2gX5ZR1XSss1RNDkl-0GCPaHzz6v8lyqNGMH4MWxvaA3n9-gu-UY_eYXRSv4Z-RL5A6w_-cnqC4-V6QnWHKPXvi6f2g64OfzgfbLqn9EY5PFA3ASrHp9AshLTf"
+        ],
+        "nguyễn đình chiểu": [
+                "grass-cs/AABkmLe7Lm_59OIrtRHBUbhWIV4jst3K1y_gK06l4PEYLQqFmOTHLvbhRSIrfgs12rsrdLcOxxqtFKplPrWYL6Ua-ZFTT2HiLTYNtfRHNlXx3mIG8LdWo3zzS7_B4QqhBmqsOBCUjQqY",
+                "gps-cs-s/ANWiy9TOsFzHTjy5cto1-bUZT-SIhVGO8idUp2djrXvKjmdtYcKNe1YlCH6zN1HnBiwOPOOBOqCXLHelkrMlc8tHs6fXZRafkbcAbrcD8HKmaFEGLnVy6vmrGbF7JQLrpx4ezJiKvvPW",
+                "gps-cs-s/ANWiy9TkE8g8oR0cq19CSja1qbQ12EgvVmCSARUhbJowL_QsNV8fwcUTR6515mYpm0WaLhS70hb6Xan2k2ZTf9U-v1opaep9z97r38iIkD_OeusG54kHddlxdb6c4REtAzFmMTL9mmks0cNmCNk"
+        ],
+        "đông ba": [
+                "grass-cs/AABkmLc0TOHDNM3Q34mSfORgsNaUYqF5D9QN1RvvM1kTccp0r-T8h-SOJxEJx-elqXwuhNXcTZ40abogNVVqmBqEStnwg4CuqK1y8SdAUl6TMsrWGXcfY_YF0g0QSbmvXTe7DIjcwEBv2RO0y6o",
+                "gps-cs-s/ANWiy9SwIYXNJDnz9ImhT0GcWOJ6GTUzuiLO8Xj94UqlYqAIa6_JL5CrShmwB7gJHRT-Bz3PaoYcdHAq7QvuUTcSV_lkJC8Dhf5e6RTeBdIfFL2YoQhk_q9448yTO-n_GExK4EQkKOSVRcjVZNk",
+                "gps-cs-s/ANWiy9S5cyXCCb9CncEUs3J_soQRPhcQ0KKqqtggSIQ-jYsTZpNCC1RvdJFGbLvryN0k5FwoFjsarjD2CgmZiM8j9h4SZFvOxvLSocEiZlIwg1k_AmGFokF9vrv0UuYxnugQ-kjlcLZBcL_9ir9u"
+        ],
+        "khải định": [
+                "grass-cs/AABkmLcsJIMtzAEJVaOKo6yT9Vrt2EqarVVTUDZIupogTaYn-zmazayAMo9P9OxO4QtLnOaDEqwNlPqfVl9h5JkaDW0xuEaLXW3rYNwmM-C0Qq-hAM_i5PqOPB9wwz9swVz-FeNPW8vs",
+                "gps-cs-s/ANWiy9REIDO1bNgvVe0InZxbRa4vZi1NYFCI6gVc3HCGvlh_UmlZ8qVDtlO9DJb32MDwU3iFhm68xKVlYf-LkViUHrqsO4pSWMW1f85usuMcYzcBj6ek_fEjsMLafCrKD2UHoc3G5vZT",
+                "gps-cs-s/ANWiy9TzevOp7ApePXzicLSxswXbsHuE65YUOe7r_6W3fcey7uuIR7pkZPZvm4qa-GZ5K6zXiBWbMKDbMrNi5dC9oCxfsVxZfg1argKIFNRw-qZzG4DFDJsZG04BS6c4cVPcapJLL-yFtlxLKho"
+        ],
+        "minh mạng": [
+                "grass-cs/AABkmLdOJ8-dgq-GSFJ8Dun7qL30oOCA7BbvPHHUZLT_vBj5id1fVmabx5cBUr8FYWa6k_wuMMLlR3IKL78Fm-pfPkDuwprtWvtMYIo2go7IB6LBekewgULRCqOifu8wPE-63urikqV3UQ",
+                "gps-cs-s/ANWiy9RsX5SpsYjQax_KGoNrv0tVKs6FmrXa-tK4ZJ6b0iNKIZYaen27gBO3hRxe1-qZUSJ_HSNwrWDZ93KLljKPxPrJlPaB-oheqzcKCy55lpjiTnZbjLuqhQkw9See-vtx_ZJOoRVyRA",
+                "gps-cs-s/ANWiy9St-mk6ZIVBg3n-rkutu950LGdFQi_X4nloO1LkgWtHih355x0CNfd585sTWT9TyH3eTmVamgRX-DdyrkEQeaNNQ-1gpWjz2gcQChd9TW9DCjr2EU9Zmo1KQrsCrCG3VpMlqeCgy_em_1U"
+        ],
+        "huyền anh": [
+                "grass-cs/AABkmLf6KJE56jJNI5BJLMgAjExz3qbn0GLxdiPB9w3iHaaNIvfVwIb3q8P9LCBhNUvYrXEMped4OE2_LWlviTWW8-jbVok-ECYm4JwuwGgfws5zg-V0sxGSriC6mz9V0vAQ_Rmsktj-3-0vmoBd",
+                "grass-cs/AABkmLdcQ4MbVPpXLZVv9Czp9lx43EsnUUvJ-Sx3n1E03MrqnIfTZ2Z5pj-2_U4n1cu013nuc4FTh9rjrCpdYXDxTJS1y4kAsX9LHd-ZhdiQqg1kNXupeRTRDR3yyja_jl5-rH78vxXfUSJPguE",
+                "grass-cs/AABkmLcpqcHoT4TADEMRrW5lZAsFYQJbxpMRrQR6x5822EaiwE0dcsRZuytV-Ng5AKOebNwZHeKDpU-wvsqupcOb-42LQyK290hxsPatF7ITTirM6yJMXqMK15kscwNuJf9G5xBZ-BXqkg"
+        ],
+        "mệ hạnh": [
+                "grass-cs/AABkmLdlrlkiudvl-5Q_Dpe3uh1dgZhiuTzZURX00eD-Lrh0K5f0XjEaBzJifAQGa2GlY3efR6xD_lvdp9RF433OzHhRC39bRoRZHAvY0Hsvtkk1EVZ-mnTu41Fg5Mcf6FM2KnjGT8oFKhdlGQ8",
+                "grass-cs/AABkmLe3GWO-XG96Z_PaQAuhkrybft0KYGsqjFFSerAEyBxaRJANwXBCQjZs6DoqP8spec0XxwgW_14QH72v3r3dx9lYHIl0mn_qRUpd1ufa-xwaWNR1UPaE4eNCiDDlZf3FcCeJbr6jm0hLbu0",
+                "grass-cs/AABkmLdE7sG0HhScZQeVZP3g4y_hI2EbF0kPEtahelHw1nseosbXua7zlAOEn_Kaoh6QpfTNIIWNTl7-59wwo-rXQQPJKP2JMjKcvBMNFOAovVHu4N7rxZaRPBAmvvyEW24By9IFmof9cg"
+        ],
+        "nam phổ": [
+                "grass-cs/AABkmLdlqWf2hhVDpvc-ZiCRVU399mu7vH1QUazpdEDTAQiFnLkYxuLkhUuyqsv8P0XewI7Nv_4zLfCpV1gAGFuHOtmmAq9Vlt8VuaXZwcdCt5XN7mbmwGa3OqYK3fBUbB6pKn4mfGbK6GQH5Ncc",
+                "grass-cs/AABkmLeOYuQBLTRYIx1Aqve-abaeA3V08DcbaGa6phN550AHnPthgbMBthdY4W-uFhNZL9VeArVaBMdKIbw3DyBTUtgCJNoP2e307S-_8-2z--qiBQq6l4CW7er-xSY5fgzlVnLnR6A0Iy_dFk8",
+                "grass-cs/AABkmLeWAAvVD4IoUVLkL-UMFy6gK0dONpcN_ZlrhlNNPA4UgV0yY7AZqSALCPzKK7IxvNljfP0ZJuRzDCOqJrGNTJaIzGYszRD0D6l62uVIZwXO2s1oiVFd4p2JQZijDnx-CvEDqvt0"
+        ],
+        "tôn đích": [
+                "grass-cs/AABkmLdKFMvXxyeiXTthA7lcat32Buu77UlukU-nHELwmUe3HXocz0r5On5gBlEeLi8c8vWl1EoOmjMDlRH7pLLtMlnV8XA2wH6lDqzdI029kmCnljowy6XbUYWCh5SLcpriNzIAg9wLEe3du4Kn",
+                "grass-cs/AABkmLdLTkkvr6N9B2kBrFQ5BBJVFLRzuKuEVFKqBDOxiKBUwviqCgU-8ck45wuUl6hk_Jo2tVVsOBDrpmD8UU4vlNjFrRmxw1pQSQQBVd2QDLwXUE9nzm8QB5YQxrTBomJKza48SFuQdLYuZAfr",
+                "grass-cs/AABkmLddxZera82N0v4OgSseArZ-JwadR7hFI50X5R0Hno8UdctSPo8PZLCONU18J8gzaDe8v-m8XNENxmMe0nSqxGMj3UkY5_d_Z6lTyCuUdkKkM2eFfUAZOa7f6nlbXv8OHS8iieU"
+        ],
+        "o tho": [
+                "grass-cs/AABkmLe41zmTEziwgvAh1ys1fYbgnNrscgm86F1Ze0lPvLerFlvqpL8n6LdUZT9shYxrr--BYfFjA6SoHkceEIjDRY62RuqfrehoUjRhdm_40tzeIuqVLDW-MAZKE2MKDRKoZxIshXxZEvCDyrDg",
+                "grass-cs/AABkmLdjiXxveXvyFBQRFVKB8d3eP0rM-9m2k9TdYdZ7pv-Q6LKUfQESaAS6zIilKKHzW72LbWsBPQwhMA0YsBoLydk101D50CtJ1QRk3a5vKXgbzip5YLVBw1dnUYrv_2Ksm5nCTt-szhDGRdk",
+                "grass-cs/AABkmLeP9ExLgLsN90YXakGmy7YHE42PjWg83z7Ar-86SdPKa7zYm-3xnsNaeD6pEGDjeAHEmmmzazs4c0Bwkxqnv6ZUXmx-DACCbTSNyi5JZulWR9FT4ej5AiawDrF2eqg3RsajDptyFgfrEuHQ"
+        ],
+        "mệ kéo": [
+                "grass-cs/AABkmLe4xR-B0jNRjp-Cr2DrN4uNg4-kDpnZyAK0cXcOEAkXXCXI3ZvJQBg8CsB-0FZKTgArGnShYr92HROUWCd377LpIXAjbC0RzlVA1xUlNdve8rB4bTQ1MG8qfkCM29tTak2eywQsHUv_aqyv",
+                "grass-cs/AABkmLd8YwXQyYgatEwCCYKrcSgx5HCW0PrNbZmXFw-Msqf1MK0EvVfKVUSQsVhA6F3dCM3amzXEUPH_m6-tC9Mj4-6gPsJMd0iLQYC7wjvtim5ZfmYPRXmgafBKRRQDGA_rkU3aHeasc3Quyes",
+                "grass-cs/AABkmLe2CTjNqTxzJcYsJq-7mrhzl3qzSFZ0hNoQ71o24WdEJPGrM3JHmLl3uT2U0fqBtvXjif1J917jDMwMBiVwcBE4393809YEIaMHhHE32AZ1a8hTdYzZDdMmzRQU4cNiwrXkPGvT"
+        ],
+        "cà phê muối": [
+                "grass-cs/AABkmLduB0qbb6qfue0hZCTIiUjeW2LAm6znE9zixYVawjD5TTQknqlf5GH5LTXrrqiRxrktZ3WG39KltjIOA3lqEXGyviN_1nhbBPLsRc8hWfJ_5c7oMsyCbjlzsRVwl6eA2x_Ej63SB-_oBm2g",
+                "grass-cs/AABkmLebkpOvu8hZqYj9NlOkKzucJ9RDmooltvfxtBVcLuJdsrCXvDuhYuEeW5kCVad495OApKPX0PksYmIzVfnHRSZ1bN6_Q2QpnoRFbPylOl5yj3tQgvpNEQI-gS0fixoS-ltC7JPDXK1fVP7M",
+                "grass-cs/AABkmLfix-rVw-nXBNHpiep7gKn6vAmSNixzLTNlaR_MjUTR3grhvFwTLqUksbGE38sgx5L_kygkIV3x9qphS12hzXtbN5UQU8kTQIwFOXG9EEbn4ZulbFc3rBZRkt86AL9rTRnSlIVNx29NxRGr"
+        ],
+        "vịt thuận": [
+                "grass-cs/AABkmLf_PPBx6og7YYlz_nDXZDMqLNMgYTeWMuOvKsMZ2Qjyxh7-HDjN8_ePrrzTsDxyZLbiI9nM6utzkIpV2NcQhBOcEWJ3a_LN2XImi-oKrOl4av9l6q-SAYt4ewTEuXSO6qoBfn3W",
+                "grass-cs/AABkmLd7dnnmpFkXsUS2zXpcGa-j_LOn2D_VohSmAFZxw0X7QqoqfPm5bbBIL8FvJX81KmuFcVHyhjWIeBRsHUnsDPCKAVUbwI4Jmp4KFk99nyKl0qoRB1FYbuPl-7rnEsrDnotfbLJchqZXDRwP",
+                "grass-cs/AABkmLcUUJQma5E2UW94f8mrNQxX2Bi7VLogIqUCDonQG_M8zv4wMGX_F9BwPxBEwthblE8yTKCzz3g3GEH8o3nm-9S4-sO5svTqIw9SQpgd-H3xG0mgMiCJfFBsPjY1hxK9vgI9UYqNfQ"
+        ],
+        "cây xoài": [
+                "grass-cs/AABkmLferHctAmdW-_tmg5ZiDVHYeVT7PfcxLOs0zemY2vC6OiMFxI9M4bTx1eNH7dVWtGKqMb-QGdZVm0-ERMyH4NWddMMWtJdyxKhPSImGoXUT2dIkSqrJMlX-RfzCLVmJzOkd9vAv",
+                "grass-cs/AABkmLcr6i9qDeWk-WpRDO9kpjQGT5DzjHjW8S1SG4lISfLApEU-dEMO0zQquwoSOJ_Vjy8vKcdF7eRAhDv89d7xjc0Gv8B23jwnhzjts_0F8AZKPLwEkat31L0xjkk53vtHI-WC6hP6S3s7tayL",
+                "grass-cs/AABkmLfr1Rmm6PSoVC369_Lvb3Hh3Ttu_Eogu8taUbzmw32XIB9jpBbAtdkcIbQs6Ppc3GIsJX0e-93gR3OeB61iqCHmsUuNQEF87npCjsL1mGzDhKMLDWJNcczFs6U3vTZfvYKgXZvY"
+        ],
+        "bún bò đêm": [
+                "grass-cs/AABkmLexh6b8y0xBuvDcQ30b9DlkZe_6yTp_mkVRRuRF6YOeA0W4Xr9lFidWDM4YQX4fyHN_opi8u-5IWlLXCkYVFQsM8v_eQrtFi_G2tMdk8aj9mKu3MB1qJW9DrSH_PBIdmPGVyPacUKRYFMmi",
+                "grass-cs/AABkmLdVD-2pIag3Ks0vDP7tElkoxHZk3k2eDtSjj9Lq6GpRA1HQ2xJ_OwkDIuq8-KED1tyufcboI8jLcG_SKtZAGNLst5zuk61F3rc0vhvjjy2W5_Xhv_FCWHWmdi8zlQl6SwZq9C8W77V6N9c",
+                "grass-cs/AABkmLdFqTgH6f3C0rcgKLhct3N1kRmsZsw5QpHQGlzDVPJ45GV4MkifbklykI-1ULE7gHeM12ATR_ZGnkoeKiv3yGmMoAfaBXSoYyp_v4ftLEsXqAOkgwqvYyOYo95DkfIkwhZ-_UPe"
+        ],
+        "bún hến": [
+                "grass-cs/AABkmLcARS2O6f7ZvMRRAWecZmUBkFbrgee7VDwAn47z_wEjAPIaPMKWdYtrnJBJJd0ECeaz3GKgMtn54Mqk5vjP0XE7MpkQdZ8bzEDaEG5AFiei3roX3lGFUrcUADZiWAg3AmEOwc3V",
+                "grass-cs/AABkmLf3_evQK0HOkTmrRM0f9_CA0207_0NyjQxJsAKn9lKhZglpyV-peO5jJnsfo7fXI3VkP2Y7T_x4U-CKTTD-S-MxAxdp-9zCZuD0BHpdWgEWiJcJ_ATNJaWl4Xt4qHNPuu00_uc29g1TVZr9",
+                "grass-cs/AABkmLfzUKY0xcP1W820d4U1WoF8_xsLjnjO31NVPm8zrEt3UTlo4TcSqbyN8JEGzmYIKFOaPufNxvwA8NS1YDm76Y2sbrkjy6UvJXgvCUE5oJEzPJIPUx1MLhfLIykNoFYkKkPmhebhRw"
+        ],
+        "bà cư": [
+                "grass-cs/AABkmLcA4Fv2yqpWJ9E4WSlJREbfkbG_Or6NGt8NR3VoUKrltUDSBtfdEURMB9TALHnJpOKIFaqoR7Yc4nN-9QuQV6voWt0ZlBF96nlD-LxAJIFgHOAu95Q9hsZjXpQzd-4wSCD4jy8S",
+                "grass-cs/AABkmLedoPD7pkqJeXpSc6_T1pJxr-ScZDWdnhfTyDmNNPNuXvBjNeLmkrEb9xoTnyQIf53_Pr2QsxpZncKzfF-gBeDoe9t8nVwwmFcg5elcdCRe2xjZr8BbPhqCmbgM_awY12K0ZcQDKBzmXIyq",
+                "grass-cs/AABkmLd9gYYKj248kj8bxFLRMNJLmvllObXbxCP3nkiC9nM4CGtIOy37ogbb1TbJExGL1Ik4RfcDm94LtT1He_8CMzWAAjHQGjl5yELc65Gb5Q-tZR_1NIHWSP0TM22OLns8yGCMHBZ1"
+        ],
+        "cua rời": [
+                "grass-cs/AABkmLcBSGWMhSLzj7xXmW94SHFgn-q8PG5Rv8y6I0-9Z2ebvJWrkC4Ueo8QnO2JYOl-e3ypuQk5WXNqQjVC70-wd1q3UBDWegzeTrsERGkpLxUUKjvwPzO3tzZuKuY9L48tk0jPT8MSfWIQ0KBH",
+                "grass-cs/AABkmLdv84BMgg-6Ey9l0qDMVPPXd1t5Q_EseXDLcFBB--kcqLrvqfbOOgMWiYkETlzO1jPS6SaYBJxcR1ILParHXta0YetQ2dpsWcMxJJt8SjMTEIz-2cj4G-7Ju1CHkNhGLtG57qVKRNtkIiA",
+                "grass-cs/AABkmLdAoN4Z1DLlL8JsqO4dL2Nia_pHly-YBnCnYrTN5Gl-x9PzvoeTBV8XPBk2GYWPNwhZ5sdTTOaTB_Q2f6KCp9mtdV9tgTrWsardTWA10YuxRUnqEZQ1vIjI_FrQhdATdR8AvZyqww"
+        ],
+        "bà ty": [
+                "grass-cs/AABkmLd-fViM-Vp49Jr9FEPddD9eJXGzrsxuc-PJvc6kO9Twr30g-9x2f_zN01tQMKa8Ba0QGqFfqzjnWEwzrXjBPi8v5GEjcEUmCZkhLY92rX8e50-97Ur-8TYc-ttJzmkZAo9nUsVRoOd1eD-7",
+                "grass-cs/AABkmLecO5o_ToI6_P5wPKbf0nvkw3rdvc64jjUc7hVQaGkrB8QnDHtDwJ12l853iQj-jxbVwaOCdtPkvnd9J36hfRz_50YuTifknA5twWSpcBIXXkYX6XS8Vs9OIbeBFf4s0aCnSpv-lddEZWcP",
+                "grass-cs/AABkmLfHiNue9mFeTvgSqFo8QUNIY5LrdBBI2d9NH7XEuOJUpzqllXPFYYJ4LdZCEfs0DOYjgsyriiPaAK4x1bXM9gXnR8JqKZaMe3oevWxv6DLPYTBDzNaaCgWcIYiuUz2UCwQxnBFt"
+        ],
+        "văn thánh": [
+                "grass-cs/AABkmLd-9_fCl1rbblqM396sph79PhPiXDDtFVNBAj29a3T2ynA1eA4MxJwCyX2FChjFYW0l9WPpPAescr-L_LDUPmlrt5p88UmZhgix8fkrcLywFXuSDg6iBmueVshWomsTZD38pC6nfA",
+                "gps-cs-s/ANWiy9Qp207mCWle7DrEcBSvIjA-Xb6fVYA8_aAE46A-Cw7BUvt1es5DW1PO_3wTlQ7KLsUAbHoZXH00hu3jXzJchtPBMoYSznf62KmjOY2kGH03Kdlq-75JbEv7dBkND8K5u9msmhO8Ig",
+                "gps-cs-s/ANWiy9RuGPs5KRc_F3X9WjPfMz_X1HMlWKyLOZCl01PcaF8PxNvnGxDlIIIPS827q_9IPbmuqbL3WGCdLR6VCVXTCz6X_YbFnvpzisNxDgAvwTFMVlpLUIGNvHGFLNwlr2tV74994Ued"
+        ],
+        "huyền không": [
+                "grass-cs/AABkmLdj9O962tut6V7nVF6RHGHPSvzuyARlHm_a3SZKOAcQbJgNBLCJc7xUEJal-7hnvAuCEckbJBmJ5UAjx8Kmnl4x2WTg5kCmu2G4tDAI4gRb93GhF4TyfvN3wPlq-J_0BrcP19Y",
+                "gps-cs-s/ANWiy9TrTlQkm_-14C5bhEcH9bMXX-HxiWi9B9VoIP7JlV8ej5UFNqWcSjmVgpPXLJfElaEnfZ-G6wcdlVV3D_EIoomOXCYIBO9dNWkV-wSolRlJ6SUkeXGOhPZ0vl6jDm8NtfLrGTXZ",
+                "gps-cs-s/ANWiy9SHbsrkV5Bari5dKGG0-G3oQKmPzFGcVABO1ZJ9gS4rZ_ieWzN4Z6J81WwBJqViQgUeZOMHCGEsyf-hSzbfpZCJpWymjoHomFtOv3cAjh0zH6S21pQri5KMCYUDoW-jUgPTqVFILX6BZHIq"
+        ],
+        "quốc học": [
+                "grass-cs/AABkmLeQMx9V4QKwbEzfA6k30cmugo-VhJe-P8H3GdrZg_d_rgrWsxkzW72kH_MvM3nYOSgcEfPuJsICDvIALP0xyKDW0mjv4Pp5xcBXz5KAXMfPtFJJHW--_8sTXU9V1YIcgl4vxVMIqg",
+                "gps-cs-s/ANWiy9T4F59Haoz8eN88t2agRznOHYPqAw5_8srhBf53g47mTfr-9eiF7ttrHHH3qxPOTHYpQpKHS74HND7sNddH-FSeE40LSGbIcSBZrbAw5ZHTM0NvtRai0Rtxy8f-HH_T6X_pnWigAQ",
+                "gps-cs-s/ANWiy9S9G7lhjuHlUbL-fbMGN6iHLO0wfhZgTsmIzN0cfCJRNpF2_M9ZZwooE2j78bWAnDTsWZ1Z3922iYAbHIjmf-jL9IblKPz55mmg6-a6q4MyAFOd64b_NXB1RpZzDw1xct4FpnQ7nw"
+        ],
+        "tam giang": [
+                "grass-cs/AABkmLem7Ra8Muw6w-mtHeYu7cw3OBFEa5aq1JTpkOP_pxvjtAY4E0GL9q3FKeEFE73NIR4cAg2d1jG8yDX_d-w1w4oc23jsia-ohL-uhK8WYiLRyhLGg0ctl_3TDtP78BA9nsmJ6Gzj5g",
+                "gps-cs-s/ANWiy9R6UB_OdZLoIaAEBuyqdpmqn4mP_df18cWtOSreb0_XvZUHn6y9UnPD_te7R06wWsveCItsXeFq1mXHbZC4uYnzQTFHQ0wqPKUkUJTV8q1rCzHzRFncqo_Xz6xE5ZlFhojfM0sJXg",
+                "gps-cs-s/ANWiy9RD6rPrwuR3v4hCqS2dQjSt2A-JPFw2SkKn6kNIolwTK32-l0enTfSlidgb1KG4u3wr-fms2aq446St2ayMX_1-kKLbonew32sYzROuVlVO-eUPsYnbZQtgyicjBe9d_tcBrU0Y"
+        ],
+        "thuận an": [
+                "grass-cs/AABkmLdRI0-ICEogcCbAoS5PPbQGr7hnmS8aAGLFtA66BFvTUg-Qq-d4DEdsLH7qNBC10GTsLk76v_IPIosEfT-D49rkuP4HeI33TitHBZXRAb7o_qqWz4SXUnqozaJAk-NMtbtyKEFx",
+                "gps-cs-s/ANWiy9SitEfhre5BCDFAj3Q-mOqO420RrRq4EFzvSBimMidBIu0fI6Q1SqaNniAn7jxEYTJ44xKVfz9nIeuD1Ps0nxoViDUXNiOp4YikhweA5dbZ9Z0i_q_ZhIn4p6LhWoheBCjA92Ox",
+                "gps-cs-s/ANWiy9Rk2UOX0Ggh_1hjScLDj547NaZ1bGWxnOe0an1KKBYIf1Z4ubX6NHBZFhRskmhsMwnTF0BVerB3NWBiAp4pDMEWlqlm_T_BHirQqybSXtc7lPmah6yqCD7gSF8rJZH1oXOT4l4VhIJHKoK-"
+        ],
+        "flower beachstay": [
+                "grass-cs/AABkmLdBI9y0XKyLldz9gy3Ui-TbId6AaRoGEMyOMQxG6caf6RHj6YGHH02fqFAoN5wMr9_Qg1wd6L2HvUMRINfhLPgWSqs_ZtzeETwKkbpcqoCQrreieLDa0MKGgucPzfjvIkNpw8rnwQ",
+                "gps-cs-s/ANWiy9T6AhPrmOg1U3omZ48eNetJ-vMczN2DFrgsP3Dd1OVxLSixhhm5O_Wm5u6yukSusdkTW1qDXqtO-a0RMIxJUc7Lr7irZI2grCwRJSHWeAppWN3P63RbiVfepsClX5pnGTCtRv2yhg",
+                "gps-cs-s/ANWiy9Rdbb4YGK3mu43rKshpsFq3DQ0xkPWLURaRuyQNhXtGCt8rn6iq2V2nEHLWOZzwsxo1NHD8aopJ3i5uyHfkIaoVT8p1Tgpom_SwECwltlXUa5XjJK7N6NelCO6yxPwVdwm_kymK"
+        ],
+        "magnolia": [
+                "grass-cs/AABkmLfUjXzXld1zpZcD-M7f5_Q_xBxQeLUZBC2FEsuoZxAzuL7Kgp5twMhrgha3tL2zt3vAmJ6IskxFlwJN_YHgRrVN5fDuWJ298lzQJgbCFV6k1O5YRJzpurR8pJiYt1w4lqg2kJJzUQ",
+                "gps-cs-s/ANWiy9QnpSNsMeTzi2MHk3bZadEyki_xxYz2kRHAOQo5lMOvco6iHrYFj0ljz4Pai232lEspZ7Rf2U43wID_vRGNDWQYx8ZbAGa4bIJ-EkSnf03bUjypyQjV6a4onwjozKor8nt4Z1r8Yw",
+                "gps-cs-s/ANWiy9TPMYT7vEYP7kLTYz5RBcqdni3GRspyrnRpjJCdR_LlWIpgFUhS44mvwhO0gFjmyispchaUdIsYQ-OyPZDJuG6MvTLs7SOMhFwO9eysff1RKJDDsmqaHJVt_Eph3spiux8GLkGcF1Ufg6E"
+        ],
+        "sông hương": [
+                "grass-cs/AABkmLf1iucBdrXrTtoLXIwSVzhVpxvwsh6kFQFNX0WcpWorj__IV0RGtr7ZyVw1z-bhreZKTd9l7QoDAJHlu4-1qdKIJrldd-iMUARU-4FOE5llKl3ysxPFvEE8z1oVY1lFuteOZnLFMw",
+                "gps-cs-s/ANWiy9R_MdPY__lY4K9Tv_ph84ZNODU_alobNKVJM9iZ41szel0Y6mGigEPBy48eQFoJpgPw8v__bTgcHmVCdt_mTLK5Wj4o2E8ctyBpdOzmxcpgMeVrpAWU4sXFpVnLDHSjmTtxclittg",
+                "gps-cs-s/ANWiy9R6BBM2FHQZp4-6M5_1HIZuDVvFKfrvMylsxRVfUszQgGZOBbZOZW9kyZ--3hv05JFURuzTsxX0SP_g-SjKcf5wubuVtf_hQ9Z1uS5w0Z2f_PN3T6ZMM6bHXku-s9oQ9HQz6WkM48LMF3ji"
+        ],
+        "tân sơn nhất": [
+                "grass-cs/AABkmLdU34YT-gSl0OQ8P3ggNZCqIwOMgNrCNGSG7LLGcNimlP4kx2BHc--wA-nBxWfnnhIidgUcFyotrMb6dfluXFDpV_FHj1Ai7o5-52Gvu3aYVSj2W0Kn2gOtQuL-Zv1zTozh9R6cYA",
+                "gps-cs-s/ANWiy9QsQ7U0qILqPklJ5X53RDHpNySUH2rUuL9nHj0COucErvEXWbBwsMHtoLnht4UmvBt9TqR8RFX8hA2J0MjShNZOrqu0OuGcEGrogR9yWVFURNlpQzZBD_-y1l52NNYkYKTOe49C5g",
+                "gps-cs-s/ANWiy9RAHUiS-vG5e6idU0Bxup8wJJu4slMXNedZqJzDCvprUJiAcmJAVb9Q-hMeAkhxDLjH1wVGAg48AAdFQV1pR5Ln08hx7qRW65jjve_-H99Bsx_ruh8LTcyhtmlQJDTmKHmEpuBbeRaw3he1"
+        ],
+        "sân bay dad": [
+                "grass-cs/AABkmLev2750Jp0nrY0d6TSAeENyTxqX-nG6wv-XQavnxM_oV7LldAUPOlxfoqTViK_k_fI_mD3ERyp9NSiYk9ynZhc7J1KY2w3DZzEjyTE3mBkdVO6c1aZOqN6vhhRMrf9Jhoi1Ru5_",
+                "gps-cs-s/ANWiy9SJQU80B9rtc49Xr7k0uLYEoS6iH8dowgRYvBq-gZVz0yrkwwbD6LFH4xL0egjFCJP83CEJF_qpvrtAdnfcC-gc5GNSSFezf6ulQAORzXajPjSd0yiMRoBIaGk1ye688eii8IQL2w",
+                "gps-cs-s/ANWiy9RYinsnRdJtbHZEsSp1LdXC2eZwRREKJv3x0q9ICx8rJMbHgH5NGVosYLQVuVvR_MS3-tqW-FMrZMAn7SVeBoNWhoQYZsdcIDCf0ViTIOxFfz8Hg7R7vLw0KZvJs4E1zfRC9rzH95yGmGm_"
+        ],
+        "đà nẵng (dad)": [
+                "grass-cs/AABkmLev2750Jp0nrY0d6TSAeENyTxqX-nG6wv-XQavnxM_oV7LldAUPOlxfoqTViK_k_fI_mD3ERyp9NSiYk9ynZhc7J1KY2w3DZzEjyTE3mBkdVO6c1aZOqN6vhhRMrf9Jhoi1Ru5_",
+                "gps-cs-s/ANWiy9SJQU80B9rtc49Xr7k0uLYEoS6iH8dowgRYvBq-gZVz0yrkwwbD6LFH4xL0egjFCJP83CEJF_qpvrtAdnfcC-gc5GNSSFezf6ulQAORzXajPjSd0yiMRoBIaGk1ye688eii8IQL2w",
+                "gps-cs-s/ANWiy9RYinsnRdJtbHZEsSp1LdXC2eZwRREKJv3x0q9ICx8rJMbHgH5NGVosYLQVuVvR_MS3-tqW-FMrZMAn7SVeBoNWhoQYZsdcIDCf0ViTIOxFfz8Hg7R7vLw0KZvJs4E1zfRC9rzH95yGmGm_"
+        ],
+        "sân bay quốc tế đà nẵng": [
+                "grass-cs/AABkmLev2750Jp0nrY0d6TSAeENyTxqX-nG6wv-XQavnxM_oV7LldAUPOlxfoqTViK_k_fI_mD3ERyp9NSiYk9ynZhc7J1KY2w3DZzEjyTE3mBkdVO6c1aZOqN6vhhRMrf9Jhoi1Ru5_",
+                "gps-cs-s/ANWiy9SJQU80B9rtc49Xr7k0uLYEoS6iH8dowgRYvBq-gZVz0yrkwwbD6LFH4xL0egjFCJP83CEJF_qpvrtAdnfcC-gc5GNSSFezf6ulQAORzXajPjSd0yiMRoBIaGk1ye688eii8IQL2w",
+                "gps-cs-s/ANWiy9RYinsnRdJtbHZEsSp1LdXC2eZwRREKJv3x0q9ICx8rJMbHgH5NGVosYLQVuVvR_MS3-tqW-FMrZMAn7SVeBoNWhoQYZsdcIDCf0ViTIOxFfz8Hg7R7vLw0KZvJs4E1zfRC9rzH95yGmGm_"
+        ]
+        };
+        Object.entries(GMAP_PHOTOS).forEach(([k, ids]) => {
+            const urls = ids.map(id => 'https://lh3.googleusercontent.com/' + id + '=w960-h720-k-no');
+            PLACE_IMAGES[k] = urls.concat(PLACE_IMAGES[k] || []);
+        });
+        function placeImagesFor(name) {
+            const lower = name.toLowerCase();
+            const longestFirst = obj => Object.keys(obj).sort((a, b) => b.length - a.length);
+            const key = longestFirst(GMAP_PHOTOS).find(k => lower.includes(k)) || longestFirst(PLACE_IMAGES).find(k => lower.includes(k));
+            return key ? PLACE_IMAGES[key] : [];
+        }
+
         function openPlaceModal(name, url) {
             modalTitle.textContent = name;
             modalMapLink.href = url;
             modalGallery.innerHTML = '';
 
-            const lower = name.toLowerCase();
-            const key = Object.keys(PLACE_IMAGES)
-                .sort((a, b) => b.length - a.length)
-                .find(k => lower.includes(k));
-
-            if (!key) {
+            const imgs = placeImagesFor(name);
+            const showNote = () => {
                 const note = document.createElement('p');
                 note.className = 'col-span-2 text-sm text-stone-500 py-6 text-center';
-                note.textContent = 'Chưa có ảnh công khai cho địa điểm này — xem ảnh thật trên Google Maps bên dưới.';
+                note.textContent = 'Chưa có ảnh cho địa điểm này — xem ảnh thật trên Google Maps bên dưới.';
                 modalGallery.appendChild(note);
+            };
+            if (!imgs.length) {
+                showNote();
             } else {
-                PLACE_IMAGES[key].slice(0, 3).forEach((imgUrl, index) => {
-                    const img = document.createElement('img');
-                    img.src = imgUrl;
-                    img.loading = 'lazy';
-                    img.className = `w-full object-cover rounded-[1rem] shadow-sm border border-stone-200/60 ${index === 0 ? 'col-span-2 h-48 sm:h-64' : 'col-span-1 h-28 sm:h-36'}`;
+                let next = 0;
+                const fill = img => {
+                    if (next >= imgs.length) {
+                        img.remove();
+                        if (!modalGallery.querySelector('img')) showNote();
+                        return;
+                    }
+                    img.onerror = () => fill(img);
+                    img.src = imgs[next++];
+                };
+                [0, 1, 2].forEach(index => {
+                    const img = new Image();
                     img.alt = `Hình ảnh ${name}`;
-                    img.onerror = () => img.remove();
+                    img.className = `w-full object-cover bg-stone-100 rounded-[1rem] shadow-sm border border-stone-200/60 ${index === 0 ? 'col-span-2 h-48 sm:h-64' : 'col-span-1 h-28 sm:h-36'}`;
                     modalGallery.appendChild(img);
+                    fill(img);
                 });
             }
 
@@ -1319,6 +1550,11 @@
                 placeModal.classList.remove('flex');
             }, 300);
         }
+
+        document.addEventListener('click', e => {
+            const t = e.target.closest('.map-photo-open');
+            if (t) openPlaceModal(t.dataset.name, t.dataset.url);
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('a[href*="google.com/maps"]').forEach(link => {
